@@ -56,22 +56,22 @@ public class Controller implements ActionListener
 		    	 {
 		    		     view1.closeHomePage();
 				    	 SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-				    	 String hql = "FROM User u WHERE user_name= :username AND password= :password";
+				    	 String hql = "Select user_role FROM User u WHERE user_name= :username AND password= :password";
 				    	 Session session = sessionFactory.openSession();
 				 		 session.beginTransaction();
 				    	 Query query = session.createQuery(hql);
 				    	 query.setParameter("username", user);
 				    	 query.setParameter("password", password);
-				    	 List results = query.list();
+				    	 List<String> results = query.list();
 				    	 session.close();
 				 		 sessionFactory.close();
-			    	 
+				 		 
 			 		
 			    	 if(!results.isEmpty())
 			    	 {
 			    		 Login l=Login.getInstance(); //singleton design pattern
-			    		 l.startSession();
-			    		// System.out.println(results);
+			    		 l.startSession(results.get(0));
+			    		
 			    	 }
 			    	 else
 			    	 {
@@ -90,10 +90,11 @@ public class Controller implements ActionListener
 			 }
 			 else if(command=="Sign Up")
 			 {
-				 view1.closeHomePage();
+				
 				 SignUp signUpFrame=new SignUp();
 							
 			 }
+			 view1.closeHomePage();
 		}
 		
 		public void addDetailsToModel(String first_name,String last_name,String user_name,String password,String email_id,String phone_no,String gender,String user_role)
@@ -109,6 +110,7 @@ public class Controller implements ActionListener
 				session.close();
 				sessionFactory.close();
 				
+				view1.closeHomePage();
 				HomePage view1=new HomePage();
 				Controller c2 =new Controller(view1);
 				c2.control();
