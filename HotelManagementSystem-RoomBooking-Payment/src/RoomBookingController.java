@@ -30,9 +30,10 @@ public class RoomBookingController implements ActionListener{
 	private PaymentPageView  paymentPageView;
 	private PaymentPageModel  paymentPageModel;
 	private Session session = null;
+	double totalPrice = 0.0;
 	private List<RoomTable> roomTableList;
 	private List<CreditCardTable> creditCardList;
-	double totalPrice = 0.0;
+	
 	JTable showAvailtable;
 	
 	
@@ -87,7 +88,7 @@ public class RoomBookingController implements ActionListener{
 		{
 
 			DateFormat df = new SimpleDateFormat("E, MMM dd yyyy");
-			
+			totalPrice = 0.0;
 			showAvailpanel = roomBookingView.getPanel_4();
 			totalPricePane = roomBookingView.getTotalPricePane();
 			
@@ -233,7 +234,7 @@ public class RoomBookingController implements ActionListener{
 					System.out.println("Payment Successful, Enjoy your Stay");
 					JOptionPane.showMessageDialog(frame, "Payment Successful, Enjoy your Stay");
 					roomBookingModel.updateRoomTable(session, showAvailtable);
-					//paymentPageModel.updateCardTable(session,cardNumber,totalPrice);
+					paymentPageModel.updateCardTable(session,cardNumber,totalPrice);
 					session.close();
 					
 				}

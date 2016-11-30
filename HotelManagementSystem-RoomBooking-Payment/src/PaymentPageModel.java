@@ -24,18 +24,21 @@ public class PaymentPageModel {
 			
 		List <CreditCardTable> creditCardList = ((org.hibernate.Query) query).list();
 		
-		//System.out.println("RoomList:" + creditCardList.size());
+		System.out.println("RoomList:" + creditCardList.size());
 		return creditCardList;	
 		
 	}	
 	
 	public void updateCardTable(Session session, String cardNumber,double Payment)
 	{
+		System.out.println("In Update Card Table");
 		String hibernateQuery = "UPDATE CreditCardTable set totalPayment=:payment WHERE cardNumber =:cardnumber";
 		Query query = session.createQuery(hibernateQuery);
 		query.setParameter("cardnumber",cardNumber);
 		query.setParameter("payment",Payment);		
 		int result = query.executeUpdate();
+		System.out.println("Credit Rows affected: " + result);	
+
 		
 		
 		
