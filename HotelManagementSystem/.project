@@ -14,4 +14,10 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<variableList>
+		<variable>
+			<name>MyImage</name>
+			<value>file:/media/meher/New%20Volume/Fall2016/OOAD/Project/38849817-H1-Exterior_1-16x7.jpg</value>
+		</variable>
+	</variableList>
 </projectDescription>
