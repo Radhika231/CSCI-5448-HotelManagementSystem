@@ -15,8 +15,8 @@ public class RoomTable {
 	@Id
 	private int roomNum;
 	private String roomType;
-	private Date roomCheckIn;
-	private Date roomCheckOut;
+	private String roomCheckIn;
+	private String roomCheckOut;
 	private Boolean roomStatus;
 	private String wifi,breakfast;
 	private double basePrice;
@@ -42,16 +42,16 @@ public class RoomTable {
 	public void setRoomType(String roomType) {
 		this.roomType = roomType;
 	}
-	public Date getRoomCheckIn() {
+	public String getRoomCheckIn() {
 		return roomCheckIn;
 	}
-	public void setRoomCheckIn(Date roomCheckIn) {
+	public void setRoomCheckIn(String roomCheckIn) {
 		this.roomCheckIn = roomCheckIn;
 	}
-	public Date getRoomCheckOut() {
+	public String getRoomCheckOut() {
 		return roomCheckOut;
 	}
-	public void setRoomCheckOut(Date roomCheckOut) {
+	public void setRoomCheckOut(String roomCheckOut) {
 		this.roomCheckOut = roomCheckOut;
 	}
 	public Boolean getRoomStatus() {
@@ -93,7 +93,7 @@ public class RoomTable {
 	
 	
 	
-	public RoomTable(int roomNum, String roomType, Date roomCheckIn, Date roomCheckOut, Boolean roomStatus, String wifi,
+	public RoomTable(int roomNum, String roomType, String roomCheckIn, String roomCheckOut, Boolean roomStatus, String wifi,
 			String breakfast, double basePrice, double roomPrice, String customerName) {
 		super();
 		this.roomNum = roomNum;

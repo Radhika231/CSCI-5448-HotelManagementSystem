@@ -26,34 +26,35 @@ public class RoomBookingController implements ActionListener{
 	
 	private ActionListener actionListener;
 	private RoomBookingView roomBookingView;
-	private RoomBookingModel roomBookingModel;
-	private PaymentPageView  paymentPageView;
-	private PaymentPageModel  paymentPageModel;
+	private static Room roomBookingModel;
+	private PaymentView  paymentPageView;
+	private Payment  paymentPageModel;
 	private Session session = null;
+	private static Session staticSession = null;
 	double totalPrice = 0.0;
 	private List<RoomTable> roomTableList;
 	private List<CreditCardTable> creditCardList;
 	
-	JTable showAvailtable;
+	private JTable showAvailtable;
+	private static JTable staticShowAvailtable;
+	private static String staticCheckIn, staticCheckOut;
 	
 	
 	public RoomBookingController(RoomBookingView roomBookingView, 
-									RoomBookingModel roomBookingModel,
-									PaymentPageView paymentPageView,
-									PaymentPageModel paymentPageModel){
+									Room roomBookingModel){
 		
 		this.roomBookingModel = roomBookingModel;
 		this.roomBookingView  = roomBookingView;
-		this.paymentPageView = paymentPageView;
-		this.paymentPageModel = paymentPageModel;		
+		//this.paymentPageView = paymentPageView;
+		//this.paymentPageModel = paymentPageModel;		
 				
 	}
 	
-	public void control(){
+	public void roomBookingControl(){
 	
 		roomBookingView.getBtnShowAvailibility().addActionListener(this);
 		roomBookingView.getBtnMakeReservation().addActionListener(this);		
-		paymentPageView.getBtnSubmit().addActionListener(this);
+		//paymentPageView.getBtnSubmit().addActionListener(this);
 		
 		
 	}
@@ -103,6 +104,12 @@ public class RoomBookingController implements ActionListener{
 			String CheckInDate =  df.format(checkInDate);
 			String CheckOutDate = df.format(checkOutDate);
 			
+			staticCheckIn = CheckInDate;
+			staticCheckOut = CheckOutDate;
+			
+			System.out.println(CheckInDate);
+			System.out.println(CheckOutDate);
+			
 		
 			for (Enumeration<AbstractButton> buttons = buttonGroup.getElements(); buttons.hasMoreElements();) 
 			{
@@ -116,7 +123,7 @@ public class RoomBookingController implements ActionListener{
 						
 			
 			session = createSqlConnection();
-		
+			staticSession = session;
 			roomTableList = roomBookingModel.getRoomTable(session,roomType);
 			//session.close();
 					
@@ -167,7 +174,7 @@ public class RoomBookingController implements ActionListener{
 				showAvailtable.setBounds(12, 49, 278, 201);
 				showAvailpanel.add(showAvailtable);
 				
-					
+				staticShowAvailtable = showAvailtable;
 				totalPricePane.setText(Double.toString(totalPrice));
 				showAvailpanel.setVisible(true);
 							
@@ -185,75 +192,33 @@ public class RoomBookingController implements ActionListener{
 		else if (actionCommand == "Confirm Reservation")
 		{
 		
+			PaymentView paymentPageView = new PaymentView();
+			Payment paymentPageModel = new Payment();
+			PaymentController paymentController = new PaymentController(paymentPageView,paymentPageModel);
+			paymentController.paymentControl();
 			paymentPageView.getFrame().setVisible(true);
-			System.out.println(Double.toString(totalPrice));
-			paymentPageView.getAmountLabel().setText(Double.toString(totalPrice));			
+			//System.out.println(Double.toString(totalPrice));
+			paymentPageView.getAmountLabel().setText(Double.toString(totalPrice));
 		}
-		
-		else if (actionCommand == "Submit")
-		{
-			
-			
-			
-			paymentPageView.getFrame().setVisible(false);
-			cardNumber		 		= paymentPageView.getCardNumberPane().getText();
-			String expiryMonth 		= paymentPageView.getExpiryMonthPane().getText();
-			String expiryYear   	= paymentPageView.getExpiryYearPane().getText();
-			String cvv				= paymentPageView.getCvvPane().getText();
-			String cardHolderName	= paymentPageView.getNameHolderPane().getText();
-			JFrame frame = new JFrame();
-			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-			//frame.getContentPane().setLayout(null);
-			
-			creditCardList = paymentPageModel.getCardTable(session,cardNumber);
-			
-			
-			for(CreditCardTable creditCardTable: creditCardList)
-			{
-						
-				if (!creditCardTable.getCardHolderName().equals((String)cardHolderName))
-				{
-					JOptionPane.showMessageDialog(frame, "Payment Failed, Please Try Again");
-				}
-								
-				else if(!creditCardTable.getCvv().equals((String)cvv))
-				{
-					JOptionPane.showMessageDialog(frame, "Payment Failed, Please Try Again");
-				}				
-				else if(!creditCardTable.getExpiryMonth().equals((String)expiryMonth))
-				{
-					JOptionPane.showMessageDialog(frame, "Payment Failed, Please Try Again");
-				}
-				else if(!creditCardTable.getExpiryYear().equals((String)expiryYear))
-				{
-					JOptionPane.showMessageDialog(frame, "Payment Failed, Please Try Again");
-				}
-				
-				else
-				{
-					System.out.println("Payment Successful, Enjoy your Stay");
-					JOptionPane.showMessageDialog(frame, "Payment Successful, Enjoy your Stay");
-					roomBookingModel.updateRoomTable(session, showAvailtable);
-					paymentPageModel.updateCardTable(session,cardNumber,totalPrice);
-					session.close();
-					
-				}
-				
-				
-			}
-			
-			
-			
-		}
-		
 		
 	}
 	
-
 	
 	public void actionPerformed(ActionEvent actionEvent){
 	
 		updateview(actionEvent);
+	}
+
+	public static void updatedB(boolean b) {
+		// TODO Auto-generated method stub
+		if(b)
+		{
+			roomBookingModel.updateRoomTable(staticSession,staticShowAvailtable,staticCheckIn,staticCheckOut);
+			staticSession.close();
+		}
+			
+			
+		
 	}
 	 
 	

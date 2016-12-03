@@ -16,15 +16,16 @@ public class RoomBookingDriver {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					
-					PaymentPageView paymentPageView = new PaymentPageView();
-					PaymentPageModel paymentPageModel = new PaymentPageModel();
+					//PaymentView paymentPageView = new PaymentView();
+					//Payment paymentPageModel = new Payment();
 					RoomBookingView roomBookingView = new RoomBookingView();
-					RoomBookingModel roomBookingmodel = new RoomBookingModel();	
+					Room roomBookingmodel = new Room();	
 					roomBookingView.getFrame().setVisible(true);
-					RoomBookingController controller = new RoomBookingController(roomBookingView, roomBookingmodel,
-																				paymentPageView,paymentPageModel);
-					controller.control();
+					RoomBookingController roomBookingController = new RoomBookingController(roomBookingView, roomBookingmodel);
+					
+					//PaymentController paymentController = new PaymentController(paymentPageView,paymentPageModel,roomBookingmodel);
+					roomBookingController.roomBookingControl();
+					//paymentController.paymentControl();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

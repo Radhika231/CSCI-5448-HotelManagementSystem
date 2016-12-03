@@ -240,11 +240,11 @@ public class RoomBookingView {
 		lblNewLabel_3.setBounds(44, 366, 70, 15);
 		panel_3.add(lblNewLabel_3);
 		
-		chckbxFreeWifi = new JCheckBox("Free Wifi");
+		chckbxFreeWifi = new JCheckBox("Wifi");
 		chckbxFreeWifi.setBounds(199, 362, 129, 23);
 		panel_3.add(chckbxFreeWifi);
 		
-		chckbxFreeBreakfast = new JCheckBox("Free BreakFast");
+		chckbxFreeBreakfast = new JCheckBox("BreakFast");
 		chckbxFreeBreakfast.setBounds(410, 362, 139, 23);
 		panel_3.add(chckbxFreeBreakfast);
 		

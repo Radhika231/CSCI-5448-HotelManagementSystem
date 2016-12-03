@@ -12,7 +12,7 @@ import javax.swing.JEditorPane;
 import javax.swing.JSpinner;
 import javax.swing.JButton;
 
-public class PaymentPageView {
+public class PaymentView {
 
 	private JFrame frame;
 	private JLabel lblPaymentTo;
@@ -74,7 +74,7 @@ public class PaymentPageView {
 	/**
 	 * Create the application.
 	 */
-	public PaymentPageView() {
+	public PaymentView() {
 		initialize();
 	}
 

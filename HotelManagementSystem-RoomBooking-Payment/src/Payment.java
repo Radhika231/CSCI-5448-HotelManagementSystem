@@ -7,11 +7,11 @@ import org.hibernate.Session;
 import com.HotelManagement.dBClasses.CreditCardTable;
 import com.HotelManagement.dBClasses.RoomTable;
 
-public class PaymentPageModel {
+public class Payment {
 	
 	
 	
-	public PaymentPageModel(){
+	public Payment(){
 		
 	}
 	
@@ -24,7 +24,7 @@ public class PaymentPageModel {
 			
 		List <CreditCardTable> creditCardList = ((org.hibernate.Query) query).list();
 		
-		System.out.println("RoomList:" + creditCardList.size());
+		System.out.println("Credit Card List:" + creditCardList.size());
 		return creditCardList;	
 		
 	}	
