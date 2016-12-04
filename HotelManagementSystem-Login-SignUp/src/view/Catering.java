@@ -14,6 +14,7 @@ public class Catering extends UserRole {
 	JButton foodInv;
 	JButton btnLogout;
 	
+	//Home Screen View for Catering Staff using factory method
 	public void userScreen()
 	{
 		JFrame frame=new JFrame("Catering Staff Home Screen");
@@ -53,7 +54,8 @@ public class Catering extends UserRole {
 		
 	}
 	
-
+    //Notify about button click updates to Observers
+	
 	public JButton getManageFoodInvBtn()
 	{
 		return foodInv;

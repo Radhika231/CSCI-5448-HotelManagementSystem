@@ -2,7 +2,6 @@ package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.List;
 
 import javax.swing.JButton;
 
@@ -13,21 +12,16 @@ import org.hibernate.SessionFactory;
 
 import com.HotelManagement.HibernateUtil;
 
-import model.*;
 import view.*;
 
 public class HouseKeepingController implements ActionListener{
 	
 
 	private HouseKeeping view1;
-	
 	public Text user_name;
-
-	private ActionListener actionListener;
-	static String itemN,numS;
+	UpdateInventory upd;
 	
-
-
+	
 	public HouseKeepingController(HouseKeeping view1)
 	{
 		this.view1 = view1;
@@ -39,7 +33,7 @@ public class HouseKeepingController implements ActionListener{
 		view1.getLogoutButton().addActionListener(this); 
 	}
 
-	UpdateInventory upd;
+	//Observes buttons clicks and responds accordingly
 	public void actionPerformed(ActionEvent actionEvent)
 	{
 		 String command = ((JButton) actionEvent.getSource()).getActionCommand();
@@ -71,6 +65,8 @@ public class HouseKeepingController implements ActionListener{
         	 		 
 		 }
 	}
+	
+	//Updates Supply Inventory
 	public void updateSupplyInventory(int itemNum,int numSupplies)
 	{
 		 SessionFactory sessionFactory = HibernateUtil.getSessionFactory();

@@ -3,15 +3,13 @@ package view;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Panel;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
 //Factory Design Pattern
 public class Receptionist extends UserRole {
 	
+	//Home screen for receptionist using factory method
 	public void userScreen()
 	{
 		JFrame frame=new JFrame("Receptionist Home Screen");

@@ -8,6 +8,8 @@ import view.Manager;
 import view.Receptionist;
 import view.UserRole;
 
+//Concrete Class for factory design pattern to instantiate UserRole screen according to user role
+//Object instantiation is deferred to sub classes
 public class loginUserRoleFactory {
 
 	public loginUserRoleFactory(String role)

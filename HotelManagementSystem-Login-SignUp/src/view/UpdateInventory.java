@@ -1,14 +1,10 @@
 package view;
 
-import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JSpinner;
 import javax.swing.JButton;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
 public class UpdateInventory {
 
@@ -18,10 +14,9 @@ public class UpdateInventory {
 	JSpinner spinner;
 	private JButton btnHomePage;
 
-
+    //View for update inventory
 	public UpdateInventory() 
 	{
-		System.out.println("bla");
 		frame = new JFrame("Update Inventory");
 		frame.setBounds(100, 100, 450, 300);
 		frame.getContentPane().setLayout(null);
@@ -54,6 +49,8 @@ public class UpdateInventory {
 		frame.setSize(500, 300);
 		frame.setVisible(true);
 	}
+	
+	//notify about button clicks to observers
 	public JButton getNewUpdateButton()
 	{
 		return btnUpdate;

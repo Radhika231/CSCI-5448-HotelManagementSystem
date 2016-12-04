@@ -11,6 +11,8 @@ import javax.swing.JFrame;
 public class HouseKeeping extends UserRole {
 	
 	JButton supplyInv,btnLogout;
+	
+	//display home screen for House Keeping Staff using Factory Method
 	public void userScreen()
 	{
 		JFrame frame=new JFrame("HouseKeeping Staff Home Screen");
@@ -48,6 +50,8 @@ public class HouseKeeping extends UserRole {
 		frame.setSize(727, 447);
 		frame.setVisible(true);
 	}
+	
+	//Notify about button click updates to Observers
 	public JButton getManageSupplyInvBtn()
 	{
 		return supplyInv;

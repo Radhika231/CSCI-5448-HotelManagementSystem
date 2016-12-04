@@ -10,6 +10,7 @@ import javax.swing.JFrame;
 //Factory Design Pattern
 public class Customer extends UserRole {
 	
+	//Display home screen for customer using factory method
 	public void userScreen()
 	{
 		JFrame frame=new JFrame("Customer Home Screen");
@@ -19,22 +20,22 @@ public class Customer extends UserRole {
 		
 		JButton makeReserv=new JButton("Make Reservation");
 		makeReserv.setForeground(Color.BLUE);
-		makeReserv.setBounds(67, 58, 155, 49);
+		makeReserv.setBounds(67, 58, 204, 49);
 		
 		JButton orderFood=new JButton("Order Food");
 		orderFood.setForeground(Color.BLUE);
-		orderFood.setBounds(297, 58, 138, 49);
+		orderFood.setBounds(404, 58, 204, 49);
 		
 		JButton viewBill=new JButton("View Bill");
 		viewBill.setForeground(Color.BLUE);
-		viewBill.setBounds(67, 142, 155, 49);
+		viewBill.setBounds(67, 142, 204, 49);
 		
 		JButton giveRating=new JButton("Give Rating");
 		giveRating.setForeground(Color.BLUE);
-		giveRating.setBounds(297, 142, 138, 49);
+		giveRating.setBounds(404, 142, 204, 49);
 		
 		JButton btnLogout = new JButton("Logout");
-		btnLogout.setBounds(494, 336, 134, 39);
+		btnLogout.setBounds(495, 336, 134, 39);
 	
 		
 		p.add(makeReserv);
@@ -46,7 +47,7 @@ public class Customer extends UserRole {
 		frame.getContentPane().add(p,BorderLayout.CENTER);
 		
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setSize(554, 319);
+		frame.setSize(727, 447);
 		frame.setVisible(true);
 	}
 }

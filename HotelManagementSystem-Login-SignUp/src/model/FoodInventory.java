@@ -19,7 +19,7 @@ import com.HotelManagement.HibernateUtil;
 @Table(name="FoodInventory")
 public class FoodInventory extends Inventory
 {
-
+    //Method to get the inventory details from Food Inventory table in the database
 	public List<Inventory> getInventoryTable()
 	{
 		 SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
@@ -32,6 +32,8 @@ public class FoodInventory extends Inventory
  		 sessionFactory.close();
 		 return inventoryList;		
 	}
+	
+	//Method to update food inventory in the database on click of update button
 	public void updateInventory(int itemNum,int numSupplies)
 	{
 		 SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
@@ -40,7 +42,7 @@ public class FoodInventory extends Inventory
  		 session.beginTransaction();
     	 Query query = session.createQuery(hql);
     	 query.setParameter("itemNum", itemNum);
-    	 query.setParameter("bumSupplies", numSupplies);
+    	 query.setParameter("numSupplies", numSupplies);
     	 session.close();
  		 sessionFactory.close();
 	}

@@ -8,6 +8,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 
+//Class to get food inventory and supply inventory details into the respective tables of the database
+//FoodInventory and SupplyInventory inherit from this class
+
 @MappedSuperclass
 public abstract class Inventory {
 

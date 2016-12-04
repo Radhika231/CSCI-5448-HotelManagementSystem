@@ -1,15 +1,9 @@
 package view;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.widgets.Button;
-import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Group;
@@ -18,12 +12,10 @@ import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
 
-
-import model.*;
 import controller.*;
 
 
-public class SignUp extends HomePage
+public class SignUp extends LoginView
 {
 	protected Shell shlSignUp;
 	private Text first_name;
@@ -35,20 +27,22 @@ public class SignUp extends HomePage
 	private Text retype_password;
 	Button btnSubmit;
 	
-	String gender=null;
-	String user_role=null;
+	private String gender=null;
+	private String user_role=null;
+	int failedLogins;
+	
 	
 	int i;
 	
 	 public SignUp()
 	 {
-		
-		
+				
 		 Display display = new Display();
 		 Shell shlSignUp = new Shell(SWT.CLOSE | SWT.BORDER );
 		 shlSignUp.setSize(872, 484);
 		 shlSignUp.setText("Sign Up");
-			
+		
+		 //call shell for sign up
 		 createContents(shlSignUp);
 
          shlSignUp.open();
@@ -62,24 +56,24 @@ public class SignUp extends HomePage
 		 
 	 }
 	 
+	 //Function to check if input entered and display error message if input is null
 	 public boolean validateInteger( Text f, String errormsg )
 	 {
 	   try
-	   {  // try to convert input to integer
-	      i =(f.getText()).length();
+	   {  
+		   
+	       i =(f.getText()).length();
 	    
-	     // input must be greater then 0
-	     // if it is, success
-	      	if ( i > 0 )
-	       return true; // success, validation succeeded
+	       if ( i > 0 )
+	       return true; // user field validated
 	    }
 	    catch(Exception e)
 	    {
-	       // if conversion failed, or input was <= 0,
-	       // fall-through and do final return below
+	       // if i was <= 0, i.e., input is null do final return below
 	    }
 	    return failedMessage( f, errormsg );
 	 }
+	 
 	 
 	 
 	 public boolean failedMessage(Text f, String errormsg)
@@ -87,13 +81,14 @@ public class SignUp extends HomePage
 		
 		 f.setMessage(errormsg);// give user feedback
 		 f.setFocus(); // set focus on field, so user can change
-	   return false; // return false, as validation has failed
+	     return false; // return false, as validation has failed
 	 }
 
 	 
-	 protected void createContents(Shell shlSignUp) {
+	 protected void createContents(Shell shlSignUp) 
+	 {
 		
-		     this.shlSignUp=shlSignUp;
+		    this.shlSignUp=shlSignUp;
       
 			shlSignUp.setSize(872, 484);
 			shlSignUp.setText("Sign Up");
@@ -250,7 +245,7 @@ public class SignUp extends HomePage
 			      public void handleEvent(Event e) {
 			        switch (e.type) {
 			        case SWT.Selection:
-			        	Controller adduser=new Controller();
+			        	UserLogInSignUpController adduser=new UserLogInSignUpController();
 			        	String new_user_name=user_name.getText();
 			        	String new_password=password.getText();
 			        	String new_first_name=first_name.getText();
@@ -261,40 +256,38 @@ public class SignUp extends HomePage
 			          
 			        	
 			        	
-			        	if((validateInteger(first_name,"First name is required")==true)&& validateInteger(last_name,"Last name is required")&&validateInteger(email_id,"Email is required")&& validateInteger(phone_no,"Phone No. is required")&& validateInteger(user_name,"User name is required")&& validateInteger(password,"Password is required")&& validateInteger(retype_password,"Retype password"))
+			        	if(validateInteger(first_name,"First name is required")&& validateInteger(last_name,"Last name is required")&&validateInteger(email_id,"Email is required")&& validateInteger(phone_no,"Phone No. is required")&& validateInteger(user_name,"User name is required")&& validateInteger(password,"Password is required")&& validateInteger(retype_password,"Retype password"))
 			        	{
-			        	    if(gender!=null && user_role!=null && (new_password.equals(new_retype_password)))
-			        		{
-			        	    	shlSignUp.close();
-			        		System.out.println("Inside loop:");
-				            adduser.addDetailsToModel(new_first_name,new_last_name,new_user_name,new_password,new_email_id,new_phone_no,gender,user_role);
-				            
-			        		
-			        		}
-			        	    if (!new_password.equals(new_retype_password))
-			        	    {
-			        	    	System.out.println("Retyped password doesnt match"+new_password+new_retype_password);
-			        	    }
-			        		if(gender==null)
-			        		{
-			        			System.out.println("Select gender");
-			                
-			        		}
-			        		if(user_role==null)
-			        		{
-			        			System.out.println("Select role");
-			        		}
-			        		
+			        		validateUserDetails(adduser,new_user_name,new_password,new_first_name,new_last_name,new_phone_no,new_retype_password,new_email_id);
 			        	}
 			        	
 			          break;
 			        }
 			      }
-			});
 
-		}
-	 
-	
+			      //Method to validate user input during sign up
+				private void validateUserDetails(UserLogInSignUpController adduser,String new_user_name, String new_password, String new_first_name,
+						String new_last_name, String new_phone_no, String new_retype_password,String new_email_id) 
+				{
+					// TODO Auto-generated method stub
+					
+					   if(gender!=null && user_role!=null && (new_password.equals(new_retype_password)))
+			    		{
+			    	    	shlSignUp.close();
+			    	    	adduser.addDetailsToModel(new_first_name,new_last_name,new_user_name,new_password,new_email_id,new_phone_no,gender,user_role,failedLogins);   
+			    		}
+			    	    if (!new_password.equals(new_retype_password))
+			    	    System.out.println("Retyped password doesnt match"+new_password+new_retype_password);
+			    	    
+			    		if(gender==null)
+			    		System.out.println("Select gender");
+			            
+			    		if(user_role==null)
+			    		System.out.println("Select role");
+				}
+			});
+	 }
+			
 }
 
 

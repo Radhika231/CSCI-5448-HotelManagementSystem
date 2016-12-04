@@ -10,6 +10,7 @@ import javax.swing.JFrame;
 //Factory Design Pattern
 public class HR extends UserRole{
 	
+	//Display home screen for HR using Factory Method
 	public void userScreen()
 	{
 		JFrame frame=new JFrame("HR Home Screen");

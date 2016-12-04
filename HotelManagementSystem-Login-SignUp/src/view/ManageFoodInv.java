@@ -27,41 +27,50 @@ public class ManageFoodInv {
 	private List<Inventory> inventoryList;
 	JButton update;
 	
+	//Gets Food inventory data from database and displays view
 	public ManageFoodInv()
 	{
 	
 		 Inventory inv =new FoodInventory();
  		 inventoryList = inv.getInventoryTable();
 		 
- 		 
-		   String[] columns = new String[] {
-	            "Item No.", "Item", "No. of Items", "Place Order"
-	        };
-	        int size=(int)inventoryList.size();
-	        //actual data for the table in a 2d array
+ 		 //JTable header
+		   String[] columns = new String[] {"Item No.", "Item", "No. of Items", "Place Order"};
+		   
+	       int size=(int)inventoryList.size();
+	       
+	       //actual data for the table in a 2d array
 	        Object[][] data = new Object[size][4];
 	        int index=0;
-	        System.out.println("Size="+inventoryList.size());
+	        
 	        if(inventoryList.size() > 0)
 			{
 				for(Inventory inventory : inventoryList)
 				{	
-					System.out.println("Index:"+ index);
 					data[index][0]= inventory.getInventory_id();
 					data[index][1] = inventory.getItemName();
 					data[index][2] = inventory.getItemQuantity();
 					data[index][3] = inventory.getNeedsToBeOrdered();
-					System.out.println(data[index][0]);
 					index++;
 				}
 	        	
-	        	
-			}
+	        }
 	        
-	        System.out.println(inventoryList.get(0));
-	        
-	        
-	        JFrame frame=new JFrame();
+	        //Create view
+	        //Passes parameters for JTable from Food Inventory table
+	        createFoodInventoryView(data,columns);
+	        	      
+					
+	}
+	
+	public JButton getUpdateButton()
+	{
+		return update;
+	}
+	
+	public void createFoodInventoryView(Object[][] data,String[] columns)
+	{
+		    JFrame frame=new JFrame("Food Inventory");
 	        JPanel mainPanel = new JPanel();
 	        mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
 
@@ -84,12 +93,6 @@ public class ManageFoodInv {
 			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			frame.setSize(554, 319);
 			frame.setVisible(true);
-		
-			
-	}
-	public JButton getUpdateButton()
-	{
-		return update;
 	}
 
 }

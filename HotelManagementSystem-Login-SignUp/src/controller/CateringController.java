@@ -2,7 +2,6 @@ package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.List;
 
 import javax.swing.JButton;
 
@@ -13,37 +12,35 @@ import org.hibernate.SessionFactory;
 
 import com.HotelManagement.HibernateUtil;
 
-import model.*;
 import view.*;
 
 public class CateringController implements ActionListener{
 	
 
 	private Catering view1;
-	
 	public Text user_name;
-
-	private ActionListener actionListener;
-	static String itemN,numS;
+	UpdateInventory upd;
 	
-
-
+   
 	public CateringController(Catering view1)
 	{
 		this.view1 = view1;
 	}
 
+	//Controls button clicks Manage Food Inventory and Logout
 	public void control()
 	{
 		view1.getManageFoodInvBtn().addActionListener(this);
 		view1.getLogoutButton().addActionListener(this); 
 	}
 
-	UpdateInventory upd;
+	
+	//Observes button clicks and performs necessary actions
 	public void actionPerformed(ActionEvent actionEvent)
 	{
 		 String command = ((JButton) actionEvent.getSource()).getActionCommand();
 		 int itemNum,numSupplies;
+		 
 		 switch(command)
 		 {
 			 case "Manage Food Inventory":
@@ -71,10 +68,12 @@ public class CateringController implements ActionListener{
         	 		 
 		 }
 	}
+	
+	//Updates the Food Inventory
 	public void updateFoodInventory(int itemNum,int numSupplies)
 	{
 		 SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-    	 String hql = "Update Inventory set itemQuantity=:numSupplies where inventory_id=:itemNum";
+    	 String hql = "Update FoodInventory set itemQuantity=:numSupplies where inventory_id=:itemNum";
 	 	 Session session = sessionFactory.openSession();
  		 session.beginTransaction();
     	 Query query = session.createQuery(hql);
@@ -83,7 +82,6 @@ public class CateringController implements ActionListener{
     	 query.executeUpdate();
     	 session.close();
  		 sessionFactory.close();
- 		 System.out.println("check"+itemNum+numSupplies);
 	}
 	
 }
