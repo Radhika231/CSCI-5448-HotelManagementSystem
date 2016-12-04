@@ -30,5 +30,7 @@
     <property name="hbm2ddl.auto">update</property>
     <mapping class="com.hms.model.Bill"/>
     <mapping class="com.hms.model.Food"/>
+    <mapping class="com.hms.model.CreditCardTable"/>
+    <mapping class="com.hms.model.RoomTable"/>
   </session-factory>
 </hibernate-configuration>
