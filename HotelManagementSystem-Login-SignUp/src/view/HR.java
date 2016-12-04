@@ -7,6 +7,7 @@ import java.awt.Panel;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
+//Factory Design Pattern
 public class HR extends UserRole{
 	
 	public void userScreen()

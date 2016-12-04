@@ -3,12 +3,17 @@ package view;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Panel;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
 public class Catering extends UserRole {
 
+	JButton foodInv;
+	JButton btnLogout;
+	
 	public void userScreen()
 	{
 		JFrame frame=new JFrame("Catering Staff Home Screen");
@@ -16,7 +21,7 @@ public class Catering extends UserRole {
 		p.setBackground(Color.DARK_GRAY);
 		p.setLayout(null);
 		
-		JButton foodInv=new JButton("Manage Food Inventory");
+		foodInv=new JButton("Manage Food Inventory");
 		foodInv.setForeground(Color.BLUE);
 		foodInv.setBounds(92, 58, 243, 49);
 		
@@ -32,7 +37,7 @@ public class Catering extends UserRole {
 		trainingSched.setForeground(Color.BLUE);
 		trainingSched.setBounds(413, 160, 215, 49);
 		
-		JButton btnLogout = new JButton("Logout");
+		btnLogout = new JButton("Logout");
 		btnLogout.setBounds(494, 336, 134, 39);
 		
 		p.add(foodInv);
@@ -45,5 +50,17 @@ public class Catering extends UserRole {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(727, 447);
 		frame.setVisible(true);
+		
 	}
+	
+
+	public JButton getManageFoodInvBtn()
+	{
+		return foodInv;
+	}
+	public JButton getLogoutButton()
+	{
+		return btnLogout;
+	}
+	
 }

@@ -74,10 +74,5 @@ public class HomePage
 	{
 		return in_password.getText();
 	}
-	public void closeHomePage()
-	{
-		frame.setVisible(false);
-		frame.dispose();
-	}
 	
 }

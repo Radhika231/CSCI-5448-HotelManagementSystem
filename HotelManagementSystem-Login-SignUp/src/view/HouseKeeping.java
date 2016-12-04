@@ -7,8 +7,10 @@ import java.awt.Panel;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
+//Factory Design Pattern
 public class HouseKeeping extends UserRole {
 	
+	JButton supplyInv,btnLogout;
 	public void userScreen()
 	{
 		JFrame frame=new JFrame("HouseKeeping Staff Home Screen");
@@ -16,7 +18,7 @@ public class HouseKeeping extends UserRole {
 		p.setBackground(Color.DARK_GRAY);
 		p.setLayout(null);
 		
-		JButton supplyInv=new JButton("Manage Supply Inventory");
+		supplyInv=new JButton("Manage Supply Inventory");
 		supplyInv.setForeground(Color.BLUE);
 		supplyInv.setBounds(92, 58, 243, 49);
 		
@@ -32,7 +34,7 @@ public class HouseKeeping extends UserRole {
 		trainingSched.setForeground(Color.BLUE);
 		trainingSched.setBounds(413, 160, 215, 49);
 		
-		JButton btnLogout = new JButton("Logout");
+		btnLogout = new JButton("Logout");
 		btnLogout.setBounds(494, 336, 134, 39);
 		
 		p.add(supplyInv);
@@ -45,6 +47,14 @@ public class HouseKeeping extends UserRole {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(727, 447);
 		frame.setVisible(true);
+	}
+	public JButton getManageSupplyInvBtn()
+	{
+		return supplyInv;
+	}
+	public JButton getLogoutButton()
+	{
+		return btnLogout;
 	}
 
 }

@@ -54,7 +54,6 @@ public class Controller implements ActionListener
 		    	 System.out.println("User"+user);
 		    	 if(!user.isEmpty() && !password.isEmpty())
 		    	 {
-		    		     view1.closeHomePage();
 				    	 SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 				    	 String hql = "Select user_role FROM User u WHERE user_name= :username AND password= :password";
 				    	 Session session = sessionFactory.openSession();
@@ -94,7 +93,7 @@ public class Controller implements ActionListener
 				 SignUp signUpFrame=new SignUp();
 							
 			 }
-			 view1.closeHomePage();
+			
 		}
 		
 		public void addDetailsToModel(String first_name,String last_name,String user_name,String password,String email_id,String phone_no,String gender,String user_role)
@@ -109,8 +108,6 @@ public class Controller implements ActionListener
 				session.getTransaction().commit();
 				session.close();
 				sessionFactory.close();
-				
-				view1.closeHomePage();
 				HomePage view1=new HomePage();
 				Controller c2 =new Controller(view1);
 				c2.control();

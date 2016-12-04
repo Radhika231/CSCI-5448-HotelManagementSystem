@@ -3,6 +3,8 @@ import java.awt.*;
 import javax.swing.*;
 import com.HotelManagement.*;
 
+import controller.*;
+
 import org.hibernate.SessionFactory;
 
 
@@ -36,39 +38,10 @@ public class Login extends HomePage
     	 return uniqueInstance;
      }
      
-     public void startSession(String role)
+     public static void startSession(String role)
      {
     	 System.out.println(role);
+    	 loginUserRoleFactory urole=new loginUserRoleFactory(role);
     	
-    	 if(role.equals("Customer"))
-    	 {
-    		UserRole screen=new Customer();
-    		screen.userScreen();
-    	 }
-    	 else if(role.equals("Manager"))
-    	 {
-    		 UserRole screen=new Manager();
-    		 screen.userScreen();
-    	 }
-    	 else if(role.equals("Receptionist"))
-    	 {
-    		 UserRole screen=new Receptionist();
-    		 screen.userScreen(); 
-    	 }
-    	 else if(role.equals("HR"))
-    	 {
-    		 UserRole screen=new HR();
-    		 screen.userScreen();
-    	 }
-    	 else if(role.equals("Catering"))
-    	 {
-    		 UserRole screen=new Catering();
-    		 screen.userScreen();
-    	 }
-    	 else if(role.equals("HouseKeeping"))
-    	 {
-    		 UserRole screen=new HouseKeeping();
-    		 screen.userScreen();
-    	 }
      }
 }

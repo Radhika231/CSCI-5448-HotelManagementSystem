@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
+//Factory Design Pattern
 public class Receptionist extends UserRole {
 	
 	public void userScreen()
