@@ -2,6 +2,7 @@ package com.hms.model;
 
 import java.util.Date;
 
+
 public class Customer extends User {
 	private int customerRoomNum;
 	private String customerRoomType;
@@ -10,6 +11,9 @@ public class Customer extends User {
 	private Date checkoutDate;
 	private boolean roomIn;
 	
+	public Customer () {
+		
+	}
 	public int getCustomerRoomNum() {
 		return customerRoomNum;
 	}

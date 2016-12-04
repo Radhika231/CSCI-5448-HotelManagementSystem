@@ -1,10 +1,10 @@
 package com.hms.controller;
 
 import com.hms.model.*;
+import com.hms.model.Customer;
 import com.hms.view.*;
 import java.awt.EventQueue;
 
-import com.hms.model.Food;
 import com.hms.view.OrderFood;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

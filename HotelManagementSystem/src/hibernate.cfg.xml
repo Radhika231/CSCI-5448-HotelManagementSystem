@@ -32,5 +32,9 @@
     <mapping class="com.hms.model.Food"/>
     <mapping class="com.hms.model.CreditCardTable"/>
     <mapping class="com.hms.model.RoomTable"/>
+    <mapping class="com.hms.model.User"/>
+    <mapping class="com.hms.model.Inventory"/>
+    <mapping class="com.hms.model.FoodInventory"/>
+    <mapping class="com.hms.model.SupplyInventory"/>
   </session-factory>
 </hibernate-configuration>

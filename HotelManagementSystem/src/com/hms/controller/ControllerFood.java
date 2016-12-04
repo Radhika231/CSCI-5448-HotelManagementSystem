@@ -1,6 +1,7 @@
 package com.hms.controller;
 import com.hms.view.*;
 import com.hms.model.*;
+import com.hms.model.Customer;
 
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;

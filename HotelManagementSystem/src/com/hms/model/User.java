@@ -1,68 +1,43 @@
 package com.hms.model;
 
-public abstract class User {
-	protected String userName;
-	protected String password;
-	protected String failedLogins;
-	protected String userRole;
-	protected String name;
-	protected int phoneNumber;
-	protected String emailID;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 
-	public String getUserName() {
-		return userName;
-	}
+//Class to get user details into database
 
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-	public String getFailedLogins() {
-		return failedLogins;
-	}
-
-	public void setFailedLogins(String failedLogins) {
-		this.failedLogins = failedLogins;
-	}
-
-	public String getUserRole() {
-		return userRole;
-	}
-
-	public void setUserRole(String userRole) {
-		this.userRole = userRole;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public int getPhoneNumber() {
-		return phoneNumber;
-	}
-
-	public void setPhoneNumber(int phoneNumber) {
-		this.phoneNumber = phoneNumber;
-	}
-
-	public String getEmailID() {
-		return emailID;
-	}
-
-	public void setEmailID(String emailID) {
-		this.emailID = emailID;
+@Entity
+@Table(name="User_Details", uniqueConstraints = {
+	    @UniqueConstraint(columnNames={"user_name","email_id"})
+	})
+public class User 
+{
+	@Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "Id", unique = true, nullable = false)
+	
+	private int id;
+	
+	String first_name,user_name,last_name,password,email_id,phone_no,gender,user_role;
+	int failedLogins=0;
+	
+	
+	public void setUserDetails(String first_name,String last_name,String user_name,String password,String email_id,String phone_no,String gender,String user_role,int failedLogins)
+	{
+		this.first_name=first_name;
+		this.last_name=last_name;
+		this.user_name=user_name;
+		this.password=password;
+		this.email_id=email_id;
+		this.phone_no=phone_no;
+		this.gender=gender;
+		this.user_role=user_role;
+		this.failedLogins=failedLogins;
+		
 	}
 
 }
