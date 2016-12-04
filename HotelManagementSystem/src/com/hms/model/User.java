@@ -8,21 +8,26 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
+import org.hibernate.annotations.GenericGenerator;
+
 //Class to get user details into database
 
 @Entity
 @Table(name="User_Details", uniqueConstraints = {
 	    @UniqueConstraint(columnNames={"user_name","email_id"})
-	})
+})
 public class User 
 {
-	@Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "Id", unique = true, nullable = false)
-	
+	//@Id
+    ////@GeneratedValue(strategy=GenerationType.AUTO)
+	//@GenericGenerator(name="kaugen" , strategy="increment")
+	//@GeneratedValue(generator="kaugen")
+    //@Column(name = "Id", unique = true, nullable = false)
 	private int id;
 	
-	String first_name,user_name,last_name,password,email_id,phone_no,gender,user_role;
+	@Id
+	String user_name;
+	String first_name,last_name,password,email_id,phone_no,gender,user_role;
 	int failedLogins=0;
 	
 	
@@ -38,6 +43,56 @@ public class User
 		this.user_role=user_role;
 		this.failedLogins=failedLogins;
 		
+	}
+
+
+	public int getId() {
+		return id;
+	}
+
+
+	public String getFirst_name() {
+		return first_name;
+	}
+
+
+	public String getUser_name() {
+		return user_name;
+	}
+
+
+	public String getLast_name() {
+		return last_name;
+	}
+
+
+	public String getPassword() {
+		return password;
+	}
+
+
+	public String getEmail_id() {
+		return email_id;
+	}
+
+
+	public String getPhone_no() {
+		return phone_no;
+	}
+
+
+	public String getGender() {
+		return gender;
+	}
+
+
+	public String getUser_role() {
+		return user_role;
+	}
+
+
+	public int getFailedLogins() {
+		return failedLogins;
 	}
 
 }

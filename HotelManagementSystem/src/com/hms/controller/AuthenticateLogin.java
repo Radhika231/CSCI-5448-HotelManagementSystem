@@ -2,9 +2,11 @@ package com.hms.controller;
 
 import java.util.List;
 
-import org.hibernate.Query;
+//import org.hibernate.Query;
+import javax.persistence.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
 
 import com.hms.view.*;
 import com.hms.model.*;
@@ -20,8 +22,21 @@ public class AuthenticateLogin extends UserLogInSignUpController
 		
 		 if(!user.isEmpty() && !password.isEmpty())
 		 {
-		    	
-			 List<String>results=authenticateUser(user,password);
+			 String result = authenticateUser(user,password);	
+
+	    	 if(!result.equals(null))
+	    	 {
+	    		 Login l=Login.getInstance(); //singleton design pattern
+	    		 l.startSession(result);
+	    	 }
+	    	 else
+	    	 {
+	    		 //inserts Failed logins
+	    		 insertFailedLogins(user);
+	    		 System.out.println("Login Failed");
+	    	 }
+			/* //List<String>results=authenticateUser(user,password);
+			 
 	 		
 	    	 if(!results.isEmpty())
 	    	 {
@@ -34,7 +49,7 @@ public class AuthenticateLogin extends UserLogInSignUpController
 	    		 //inserts Failed logins
 	    		 insertFailedLogins(user);
 	    		 System.out.println("Login Failed");
-	    	 }
+	    	 }*/
 		 }
 		 else if(user.isEmpty())
 		 {
@@ -49,19 +64,35 @@ public class AuthenticateLogin extends UserLogInSignUpController
 	}
 	
 	//Returns role of user if the user name and password is valid
-	public List<String> authenticateUser(String user,String password)
+	//public List<String> authenticateUser(String user,String password)
+	public String authenticateUser(String user,String password)
 	{
-		 SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+		/* SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 		 String hql = "Select user_role FROM User WHERE user_name= :username AND password= :password";
+		 //String hql = "FROM User AS E WHERE E.user_name = :username and E.password =:password";
 		 Session session = sessionFactory.openSession();
 		 session.beginTransaction();
 		 Query query = session.createQuery(hql);
 		 query.setParameter("username", user);
 		 query.setParameter("password", password);
-		 List<String> results = query.list();
+		 List<String> results = ((org.hibernate.Query) query).list();
 		 session.close();
 		 sessionFactory.close();
-		 return results;
+		 */
+		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+		Session session = sessionFactory.openSession();
+		session.beginTransaction();
+		User userObj = session.get(com.hms.model.User.class, user);
+		System.out.println(userObj.getUser_role());
+		String result = null;
+		if(userObj.getUser_name().equalsIgnoreCase(user)){
+			if(userObj.getPassword().equalsIgnoreCase(password)){
+				result = userObj.getUser_role();
+			}
+		}
+		session.close();
+		sessionFactory.close();
+		return result;
 	}
 	
 	//Function to insert number of failed logins
@@ -69,12 +100,12 @@ public class AuthenticateLogin extends UserLogInSignUpController
 	{
 		 SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 		 String hql1="SELECT failedLogins from User u WHERE u.user_name=:username";
-		 String hql2 = "UPDATE User set failedLogins=:failedLogins where user_name=:username";
+		 String hql2 = "UPDATE User_Details set failedLogins=:failedLogins where user_name=:username";
 		 Session session = sessionFactory.openSession();
 		 session.beginTransaction();
 		 Query query1 = session.createQuery(hql1);
 		 query1.setParameter("username",username);
-		 List failedLogs=query1.list();
+		 List failedLogs=((org.hibernate.Query) query1).list();
 		 int failed=(Integer)failedLogs.get(0)+1;
 		 System.out.println("FAiled="+failed);
 		 Query query2=session.createQuery(hql2);

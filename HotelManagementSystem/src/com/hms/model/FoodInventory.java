@@ -17,7 +17,7 @@ import com.hms.view.*;
 import com.hms.controller.*;
 
 @Entity
-@Table(name="FoodInventory")
+//@Table(name="FoodInventory")
 public class FoodInventory extends Inventory
 {
     //Method to get the inventory details from Food Inventory table in the database

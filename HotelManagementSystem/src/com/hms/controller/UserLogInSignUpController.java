@@ -6,6 +6,7 @@ import org.eclipse.swt.widgets.Text;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
 
 import com.hms.view.*;
 import com.hms.model.*;
@@ -55,14 +56,22 @@ public class UserLogInSignUpController implements ActionListener
 		{
 			 User u=new User();
 			 u.setUserDetails(first_name,last_name,user_name,password,email_id,phone_no,gender,user_role,failed_logins);
-			 SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-
+			 /*SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 				Session session = sessionFactory.openSession();
 				session.beginTransaction();
 				session.save(u);
 				session.getTransaction().commit();
 				session.close();
 				sessionFactory.close();
+				*/
+				SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+				Session session = sessionFactory.openSession();
+				session.beginTransaction();
+				session.save(u);
+				session.getTransaction().commit();
+				session.close();
+				sessionFactory.close();
+				
 				LoginView view1=new LoginView();
 				UserLogInSignUpController c2 =new UserLogInSignUpController(view1);
 				c2.control();
