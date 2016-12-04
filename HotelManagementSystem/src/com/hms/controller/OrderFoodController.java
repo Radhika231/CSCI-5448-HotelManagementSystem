@@ -86,7 +86,14 @@ public class OrderFoodController implements ActionListener{
 		if(action.equalsIgnoreCase("Go Ahead")){
 			viewOrderFood.getLblBill().setVisible(false);
 			if(viewOrderFood.getChckbxTakeAway().isSelected()){
-				viewOrderFood.getLblStatus().setText("Please Pay at the cashier");
+				//viewOrderFood.getLblStatus().setText("Please Pay at the cashier");
+				PaymentView paymentPageView = new PaymentView();
+				Payment paymentPageModel = new Payment();
+				PaymentController paymentController = new PaymentController(paymentPageView,paymentPageModel);
+				paymentController.paymentControl();
+				paymentPageView.getFrame().setVisible(true);
+				//System.out.println(Double.toString(totalPrice));
+				paymentPageView.getAmountLabel().setText(Double.toString(b));
 			}
 			else{
 				viewOrderFood.getLblStatus().setText("Bill has been added to your account");
