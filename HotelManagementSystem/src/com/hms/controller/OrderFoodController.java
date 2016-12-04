@@ -14,17 +14,17 @@ import org.hibernate.cfg.Configuration;
 
 
 
-public class ControllerFood implements ActionListener{
+public class OrderFoodController implements ActionListener{
 	
 	private ActionListener actionListener;
-	private OrderFood viewOrderFood;
+	private OrderFoodView viewOrderFood;
 	private Food modelFood;
 	private Customer _cust;
 	ArrayList<Food> foodList = new ArrayList<Food>();
 	private Bill custBill;
 	private double b;
 	
-	public ControllerFood(OrderFood viewOrderFood, Food modelFood, Customer _cust) {
+	public OrderFoodController(OrderFoodView viewOrderFood, Food modelFood, Customer _cust) {
 		super();
 		this.viewOrderFood = viewOrderFood;
 		this.modelFood = modelFood;

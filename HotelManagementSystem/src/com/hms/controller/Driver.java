@@ -5,7 +5,7 @@ import com.hms.model.Customer;
 import com.hms.view.*;
 import java.awt.EventQueue;
 
-import com.hms.view.OrderFood;
+import com.hms.view.OrderFoodView;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -25,11 +25,11 @@ public class Driver {
 					session.close();
 					sessionFactory.close();
 					*/
-					OrderFood of = new OrderFood();
+					OrderFoodView of = new OrderFoodView();
 					of.frame.setVisible(true);
 					Food _food = new Food();
 					Customer _cust = new Customer();
-					ControllerFood confood = new ControllerFood(of, _food, _cust);
+					OrderFoodController confood = new OrderFoodController(of, _food, _cust);
 					confood.control();
 				} catch (Exception e) {
 					e.printStackTrace();

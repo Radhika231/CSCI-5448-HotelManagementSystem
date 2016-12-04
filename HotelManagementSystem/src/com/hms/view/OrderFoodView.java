@@ -27,8 +27,12 @@ import javax.swing.JFormattedTextField;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.SwingConstants;
+import javax.swing.ImageIcon;
+import java.awt.Color;
+import javax.swing.border.LineBorder;
+import java.awt.Font;
 
-public class OrderFood {
+public class OrderFoodView {
 
 	public JFrame frame;
 	
@@ -82,7 +86,7 @@ public class OrderFood {
 	
 	// Create the application.
 
-	public OrderFood() {
+	public OrderFoodView() {
 		initialize();
 	}
 
@@ -91,16 +95,25 @@ public class OrderFood {
 	 */
 	private void initialize() {
 		frame = new JFrame();
+		frame.getContentPane().setBackground(Color.WHITE);
 		frame.setBounds(0, 0, 1000, 500);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 			
 		lblMenu = new JLabel("MENU");
-		lblMenu.setBounds(480, 99, 70, 15);
+		lblMenu.setFont(new Font("Purisa", Font.BOLD, 24));
+		lblMenu.setBounds(453, 300, 129, 40);
 		frame.getContentPane().add(lblMenu);
 		
+		lblBill = new JLabel("Bill");
+		lblBill.setBounds(425, 352, 167, 15);
+		frame.getContentPane().add(lblBill);
+		lblBill.setVisible(false);
+		
 		panelEntree = new JPanel();
-		panelEntree.setBounds(46, 201, 339, 250);
+		panelEntree.setBorder(new LineBorder(new Color(154, 205, 50), 5, true));
+		panelEntree.setBackground(new Color(255, 255, 255));
+		panelEntree.setBounds(46, 201, 339, 210);
 		frame.getContentPane().add(panelEntree);
 		panelEntree.setLayout(null);
 		
@@ -153,11 +166,13 @@ public class OrderFood {
 		panelEntree.add(spinnera6);
 		
 		JLabel lblAppetizers = new JLabel("Appetizers");
-		lblAppetizers.setBounds(114, 0, 134, 15);
+		lblAppetizers.setBounds(114, 7, 134, 15);
 		panelEntree.add(lblAppetizers);
 		
 		panelSides = new JPanel();
-		panelSides.setBounds(550, 201, 339, 250);
+		panelSides.setBorder(new LineBorder(new Color(154, 205, 50), 5));
+		panelSides.setBackground(new Color(255, 255, 255));
+		panelSides.setBounds(610, 201, 339, 210);
 		frame.getContentPane().add(panelSides);
 		panelSides.setLayout(null);
 		
@@ -210,20 +225,23 @@ public class OrderFood {
 		panelSides.add(spinnerm6);
 		
 		JLabel lblMainCourse = new JLabel("Main Course");
-		lblMainCourse.setBounds(149, 12, 118, 15);
+		lblMainCourse.setBounds(149, 7, 118, 15);
 		panelSides.add(lblMainCourse);
 		
 		chckbxDineIn = new JCheckBox("Dine In");
+		chckbxDineIn.setBackground(new Color(255, 255, 255));
 		chckbxDineIn.setSelected(true);
-		chckbxDineIn.setBounds(46, 35, 129, 23);
+		chckbxDineIn.setBounds(430, 429, 86, 23);
 		frame.getContentPane().add(chckbxDineIn);
 		
 		chckbxTakeAway = new JCheckBox("Take Away");
-		chckbxTakeAway.setBounds(46, 8, 129, 23);
+		chckbxTakeAway.setBackground(new Color(255, 255, 255));
+		chckbxTakeAway.setBounds(520, 429, 129, 23);
 		frame.getContentPane().add(chckbxTakeAway);
 		
 		panelReview = new JPanel();
-		panelReview.setBounds(672, 34, 328, 80);
+		panelReview.setBackground(new Color(255, 255, 255));
+		panelReview.setBounds(345, 460, 328, 40);
 		frame.getContentPane().add(panelReview);
 		panelReview.setLayout(null);
 		
@@ -244,16 +262,19 @@ public class OrderFood {
 		panelReview.add(btnGoBack);
 		
 		panelDone = new JPanel();
-		panelDone.setBounds(351, 182, 298, 120);
+		panelDone.setBackground(new Color(255, 255, 255));
+		panelDone.setBounds(351, 253, 298, 55);
 		frame.getContentPane().add(panelDone);
 		panelDone.setLayout(null);
 		
 		JLabel lblCongratulations = new JLabel("Congratulations!");
-		lblCongratulations.setBounds(83, 12, 136, 15);
+		lblCongratulations.setHorizontalAlignment(SwingConstants.CENTER);
+		lblCongratulations.setBounds(97, 12, 136, 15);
 		panelDone.add(lblCongratulations);
 		
 		JLabel lblFoodOrdered = new JLabel("Food Ordered!");
-		lblFoodOrdered.setBounds(97, 41, 122, 15);
+		lblFoodOrdered.setHorizontalAlignment(SwingConstants.CENTER);
+		lblFoodOrdered.setBounds(97, 41, 136, 15);
 		panelDone.add(lblFoodOrdered);
 		
 		lblStatus = new JLabel("status");
@@ -261,10 +282,10 @@ public class OrderFood {
 		lblStatus.setBounds(0, 55, 298, 15);
 		panelDone.add(lblStatus);
 		
-		lblBill = new JLabel("Bill");
-		lblBill.setBounds(424, 123, 167, 15);
-		lblBill.setVisible(false);
-		frame.getContentPane().add(lblBill);
+		JLabel lblLogo = new JLabel("");
+		lblLogo.setIcon(new ImageIcon("/home/subir/Downloads/chaat.jpeg"));
+		lblLogo.setBounds(0, -23, 1000, 251);
+		frame.getContentPane().add(lblLogo);
 		btnGoAhead.setVisible(false);
 		btnCancel.setVisible(false);
 		
