@@ -67,7 +67,8 @@ public class CateringController implements ActionListener{
 				 JOptionPane.showMessageDialog(frame, "Entry Updated in Food Inventory");
 				 break;		
 			 case "HOME PAGE":
-				 Login.startSession("Catering");
+				 Login l=Login.getInstance();
+				 l.startSession("Catering");
 				 break;
 	         default:
 	        	 break;

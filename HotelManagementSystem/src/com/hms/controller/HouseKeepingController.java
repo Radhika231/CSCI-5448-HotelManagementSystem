@@ -63,7 +63,8 @@ public class HouseKeepingController implements ActionListener{
 				 JOptionPane.showMessageDialog(frame, "Entry Updated in Supply Inventory");
 				 break;		
 			 case "HOME PAGE":
-				 Login.startSession("HouseKeeping");
+				 Login l=Login.getInstance();
+				 l.startSession("HouseKeeping");
 				 break;
 	         default:
 	        	 break;
