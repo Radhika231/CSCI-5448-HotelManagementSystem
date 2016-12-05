@@ -27,7 +27,7 @@ public class HouseKeepingView extends UserRole {
 		Panel p=new Panel();
 		p.setBackground(new Color(240, 230, 140));
 		p.setLayout(null);
-		frame.setLocation(400, 50);
+		
 		
 		frame.getContentPane().add(p,BorderLayout.CENTER);
 		JLabel lblNewLabel = new JLabel(iconX);
