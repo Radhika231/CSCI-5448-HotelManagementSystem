@@ -4,6 +4,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 import org.eclipse.swt.widgets.Text;
 import org.hibernate.Query;
@@ -56,6 +58,8 @@ public class HouseKeepingController implements ActionListener{
 				 numSupplies=upd.getNumSupplies();
 				 SupplyInventory supply=new SupplyInventory();
 				 supply.updateInventory(itemNum,numSupplies);
+				 JFrame frame = new JFrame("Entry Updated");
+				 JOptionPane.showMessageDialog(frame, "Entry Updated in Food Inventory");
 				 break;		
 			 case "HOME PAGE":
 				 Login.startSession("HouseKeeping");

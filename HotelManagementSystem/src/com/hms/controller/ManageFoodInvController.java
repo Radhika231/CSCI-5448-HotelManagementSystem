@@ -48,7 +48,7 @@ public class ManageFoodInvController {
 					data[index][0]= inventory.getInventory_id();
 					data[index][1] = inventory.getItemName();
 					data[index][2] = inventory.getItemQuantity();
-					data[index][3] = inventory.getNeedsToBeOrdered();
+					data[index][3] = inventory.getNeedsToBeOrdered()?"yes":"no";
 					index++;
 				}
 	        	

@@ -7,6 +7,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 import org.eclipse.swt.widgets.Text;
 import org.hibernate.Query;
@@ -60,6 +62,8 @@ public class CateringController implements ActionListener{
 				 numSupplies=upd.getNumSupplies();
 				 FoodInventory food=new FoodInventory();
 				 food.updateInventory(itemNum, numSupplies);
+				 JFrame frame = new JFrame("Entry Updated");
+				 JOptionPane.showMessageDialog(frame, "Entry Updated in Food Inventory");
 				 break;		
 			 case "HOME PAGE":
 				 Login.startSession("Catering");

@@ -45,6 +45,33 @@ public class SupplyInventory extends Inventory
     	 query.setParameter("itemNum", itemNum);
     	 query.setParameter("numSupplies", numSupplies);
     	 query.executeUpdate();
+    	 String hql2="from SupplyInventory";
+    	 Query query2=session.createQuery(hql2);
+    	 List<Inventory> results=((org.hibernate.Query)query2).list();
+    	 System.out.println(results);
+    	 int res_size=results.size();
+    	 if(res_size > 0)
+			{
+    		 int index=0;
+    		 Object data[]=new Object[res_size];
+				for(Inventory res : results)
+				{	
+					System.out.println(res.getItemQuantity());
+					if(res.getItemQuantity()<50)
+					{
+						Boolean new_val=true;
+						int inv_id=res.getInventory_id();
+						String hql3="Update SupplyInventory set needsToBeOrdered=:new_value where inventory_id=:inv_id";
+						
+						Query query3 = session.createQuery(hql3);
+						 query3.setParameter("inv_id",inv_id);
+				    	 query3.setParameter("new_value", new_val);
+				    	
+				    	 query3.executeUpdate();
+				    	 				
+					}
+				}
+	        }
     	 session.close();
  		 sessionFactory.close();
 	}
