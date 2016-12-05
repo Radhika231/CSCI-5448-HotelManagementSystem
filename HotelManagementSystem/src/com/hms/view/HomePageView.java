@@ -2,7 +2,7 @@ package com.hms.view;
 import java.awt.*;
 import javax.swing.*;
 
-public class HomePage 
+public class HomePageView 
 {
 	private JFrame frame;
 	private JLabel username,password;
@@ -12,7 +12,7 @@ public class HomePage
 	
 	
 	 
-	public HomePage()
+	public HomePageView()
 	{
 		frame=new JFrame("Home Page");
 		frame.getContentPane().setLayout(new BorderLayout());

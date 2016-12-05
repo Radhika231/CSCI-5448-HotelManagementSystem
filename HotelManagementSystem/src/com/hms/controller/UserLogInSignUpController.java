@@ -45,7 +45,7 @@ public class UserLogInSignUpController implements ActionListener
 			 
 			 else if(command=="Sign Up")
 			  {
-					SignUp signUpFrame=new SignUp();
+					SignUpView signUpFrame=new SignUpView();
 			  }
 		}
 				

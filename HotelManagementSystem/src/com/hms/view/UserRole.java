@@ -1,4 +1,4 @@
-package com.hms.model;
+package com.hms.view;
 
 //Factory Method Design Pattern
 //Abstract class which defers instantiation to sub classes

@@ -12,6 +12,7 @@ import javax.persistence.Table;
 import javax.persistence.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
 
 import com.hms.view.*;
 import com.hms.controller.*;

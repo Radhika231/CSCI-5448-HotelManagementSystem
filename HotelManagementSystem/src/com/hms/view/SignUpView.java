@@ -15,7 +15,7 @@ import org.eclipse.swt.widgets.Text;
 import com.hms.controller.*;
 
 
-public class SignUp extends LoginView
+public class SignUpView extends LoginView
 {
 	protected Shell shlSignUp;
 	private Text first_name;
@@ -34,7 +34,7 @@ public class SignUp extends LoginView
 	
 	int i;
 	
-	 public SignUp()
+	 public SignUpView()
 	 {
 				
 		 Display display = new Display();

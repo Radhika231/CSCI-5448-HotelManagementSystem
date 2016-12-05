@@ -16,12 +16,12 @@ import com.hms.model.*;
 public class HouseKeepingController implements ActionListener{
 	
 
-	private HouseKeeping view1;
+	private HouseKeepingView view1;
 	public Text user_name;
-	UpdateInventory upd;
+	UpdateInventoryView upd;
 	
 	
-	public HouseKeepingController(HouseKeeping view1)
+	public HouseKeepingController(HouseKeepingView view1)
 	{
 		this.view1 = view1;
 	}
@@ -40,14 +40,14 @@ public class HouseKeepingController implements ActionListener{
 		 switch(command)
 		 {
 			 case "Manage Supply Inventory":
-				 ManageSupplyInv supplyinv=new ManageSupplyInv();
+				 ManageSupplyInvController supplyinv=new ManageSupplyInvController();
 				 supplyinv.getUpdateButton().addActionListener(this);
 				 break;
 			 case "Logout":
 				 System.exit(0);
 				 break;
 			 case "UPDATE":
-				 upd=new UpdateInventory();
+				 upd=new UpdateInventoryView();
 				 upd.getNewUpdateButton().addActionListener(this);
 				 upd.getHomePage().addActionListener(this);
 				 break;

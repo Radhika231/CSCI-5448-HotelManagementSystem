@@ -104,7 +104,7 @@ public class AuthenticateLogin extends UserLogInSignUpController
 	//Function to insert number of failed logins
 	public void insertFailedLogins(String username)
 	{
-		 SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+		 SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
 		 String hql1="SELECT failedLogins from User u WHERE u.user_name=:username";
 		 String hql2 = "UPDATE User_Details set failedLogins=:failedLogins where user_name=:username";
 		 Session session = sessionFactory.openSession();

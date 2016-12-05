@@ -6,7 +6,7 @@ import javax.swing.JTextField;
 import javax.swing.JSpinner;
 import javax.swing.JButton;
 
-public class UpdateInventory {
+public class UpdateInventoryView {
 
 	private JFrame frame;
 	private JTextField textField;
@@ -15,7 +15,7 @@ public class UpdateInventory {
 	private JButton btnHomePage;
 
     //View for update inventory
-	public UpdateInventory() 
+	public UpdateInventoryView() 
 	{
 		frame = new JFrame("Update Inventory");
 		frame.setBounds(100, 100, 450, 300);

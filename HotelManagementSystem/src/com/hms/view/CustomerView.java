@@ -7,8 +7,6 @@ import java.awt.Panel;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
-import com.hms.model.UserRole;
-
 //Factory Design Pattern
 public class CustomerView extends UserRole {
 	

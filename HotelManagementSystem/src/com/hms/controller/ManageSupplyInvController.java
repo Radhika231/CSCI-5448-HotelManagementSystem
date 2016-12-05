@@ -20,13 +20,13 @@ import com.hms.view.*;
 import com.hms.model.*;
 
 
-public class ManageSupplyInv {
+public class ManageSupplyInvController {
 	
 	private List<Inventory> inventoryList;
 	JButton update;
 	
 	//Gets Supply inventory data from database and displays view
-	public ManageSupplyInv()
+	public ManageSupplyInvController()
 	{
 	
 		 Inventory inv =new SupplyInventory();

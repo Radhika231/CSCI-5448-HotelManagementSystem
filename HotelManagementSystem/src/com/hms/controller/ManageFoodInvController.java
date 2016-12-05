@@ -20,13 +20,13 @@ import com.hms.view.*;
 import com.hms.model.*;
 
 
-public class ManageFoodInv {
+public class ManageFoodInvController {
 	
 	private List<Inventory> inventoryList;
 	JButton update;
 	
 	//Gets Food inventory data from database and displays view
-	public ManageFoodInv()
+	public ManageFoodInvController()
 	{
 	
 		 Inventory inv =new FoodInventory();

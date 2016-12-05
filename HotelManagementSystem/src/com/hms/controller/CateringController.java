@@ -17,12 +17,12 @@ import org.hibernate.SessionFactory;
 public class CateringController implements ActionListener{
 	
 
-	private Catering view1;
+	private CateringView view1;
 	public Text user_name;
-	UpdateInventory upd;
+	UpdateInventoryView upd;
 	
    
-	public CateringController(Catering view1)
+	public CateringController(CateringView view1)
 	{
 		this.view1 = view1;
 	}
@@ -44,14 +44,14 @@ public class CateringController implements ActionListener{
 		 switch(command)
 		 {
 			 case "Manage Food Inventory":
-				 ManageFoodInv foodinv=new ManageFoodInv();
+				 ManageFoodInvController foodinv=new ManageFoodInvController();
 				 foodinv.getUpdateButton().addActionListener(this);
 				 break;
 			 case "Logout":
 				 System.exit(0);
 				 break;
 			 case "UPDATE":
-				 upd=new UpdateInventory();
+				 upd=new UpdateInventoryView();
 				 upd.getNewUpdateButton().addActionListener(this);
 				 upd.getHomePage().addActionListener(this);
 				 break;
