@@ -20,16 +20,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="3" language="java" name="com.hms.controller.loginUserRoleFactory" project="HotelManagementSystem" 
-    file="/HotelManagementSystem/src/com/hms/controller/loginUserRoleFactory.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1396" y="516"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="4" language="java" name="com.hms.controller.UserLogInSignUpController" project="HotelManagementSystem" 
+  <class id="3" language="java" name="com.hms.controller.UserLogInSignUpController" project="HotelManagementSystem" 
     file="/HotelManagementSystem/src/com/hms/controller/UserLogInSignUpController.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="644" y="239"/>    
@@ -39,7 +30,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="5" language="java" name="com.hms.model.User" project="HotelManagementSystem" 
+  <class id="4" language="java" name="com.hms.model.User" project="HotelManagementSystem" 
     file="/HotelManagementSystem/src/com/hms/model/User.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="384" y="849"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -48,7 +39,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="6" language="java" name="com.hms.view.ReceptionistView" project="HotelManagementSystem" 
+  <class id="5" language="java" name="com.hms.view.ReceptionistView" project="HotelManagementSystem" 
     file="/HotelManagementSystem/src/com/hms/view/ReceptionistView.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="939" y="785"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -57,7 +48,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="7" language="java" name="com.hms.view.UserRole" project="HotelManagementSystem" 
+  <class id="6" language="java" name="com.hms.view.UserRole" project="HotelManagementSystem" 
     file="/HotelManagementSystem/src/com/hms/view/UserRole.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1139" y="618"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -66,7 +57,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="8" language="java" name="com.hms.view.LoginView" project="HotelManagementSystem" 
+  <class id="7" language="java" name="com.hms.view.LoginView" project="HotelManagementSystem" 
     file="/HotelManagementSystem/src/com/hms/view/LoginView.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1112" y="232"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -75,7 +66,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="9" language="java" name="com.hms.view.CustomerView" project="HotelManagementSystem" 
+  <class id="8" language="java" name="com.hms.view.CustomerView" project="HotelManagementSystem" 
     file="/HotelManagementSystem/src/com/hms/view/CustomerView.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="954" y="1033"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -84,7 +75,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="10" language="java" name="com.hms.view.HRView" project="HotelManagementSystem" 
+  <class id="9" language="java" name="com.hms.view.HRView" project="HotelManagementSystem" 
     file="/HotelManagementSystem/src/com/hms/view/HRView.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1113" y="955"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -93,7 +84,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="11" language="java" name="com.hms.view.ManagerView" project="HotelManagementSystem" 
+  <class id="10" language="java" name="com.hms.view.ManagerView" project="HotelManagementSystem" 
     file="/HotelManagementSystem/src/com/hms/view/ManagerView.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1254" y="955"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -102,7 +93,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="12" language="java" name="com.hms.view.SignUpView" project="HotelManagementSystem" 
+  <class id="11" language="java" name="com.hms.view.SignUpView" project="HotelManagementSystem" 
     file="/HotelManagementSystem/src/com/hms/view/SignUpView.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1550" y="230"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -111,16 +102,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="13" language="java" name="com.hms.view.HomePageView" project="HotelManagementSystem" 
-    file="/HotelManagementSystem/src/com/hms/view/HomePageView.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="681" y="809"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="14" language="java" name="com.hms.view.HouseKeepingView" project="HotelManagementSystem" 
+  <class id="12" language="java" name="com.hms.view.HouseKeepingView" project="HotelManagementSystem" 
     file="/HotelManagementSystem/src/com/hms/view/HouseKeepingView.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1423" y="989"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -129,7 +111,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="15" language="java" name="com.hms.view.CateringView" project="HotelManagementSystem" 
+  <class id="13" language="java" name="com.hms.view.CateringView" project="HotelManagementSystem" 
     file="/HotelManagementSystem/src/com/hms/view/CateringView.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1642" y="992"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -138,7 +120,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="16" language="java" name="com.hms.model.Payment" project="HotelManagementSystem" 
+  <class id="14" language="java" name="com.hms.model.Payment" project="HotelManagementSystem" 
     file="/HotelManagementSystem/src/com/hms/model/Payment.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1877" y="2478"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -147,7 +129,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="17" language="java" name="com.hms.model.RoomTable" project="HotelManagementSystem" 
+  <class id="15" language="java" name="com.hms.model.RoomTable" project="HotelManagementSystem" 
     file="/HotelManagementSystem/src/com/hms/model/RoomTable.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1029" y="2339"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -156,7 +138,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="18" language="java" name="com.hms.model.Food" project="HotelManagementSystem" 
+  <class id="16" language="java" name="com.hms.model.Food" project="HotelManagementSystem" 
     file="/HotelManagementSystem/src/com/hms/model/Food.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="595" y="1723"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -165,7 +147,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="19" language="java" name="com.hms.model.SupplyInventory" project="HotelManagementSystem" 
+  <class id="17" language="java" name="com.hms.model.SupplyInventory" project="HotelManagementSystem" 
     file="/HotelManagementSystem/src/com/hms/model/SupplyInventory.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1432" y="1840"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -174,7 +156,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="20" language="java" name="com.hms.model.Inventory" project="HotelManagementSystem" 
+  <class id="18" language="java" name="com.hms.model.Inventory" project="HotelManagementSystem" 
     file="/HotelManagementSystem/src/com/hms/model/Inventory.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1533" y="1445"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -183,7 +165,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="21" language="java" name="com.hms.model.Room" project="HotelManagementSystem" 
+  <class id="19" language="java" name="com.hms.model.Room" project="HotelManagementSystem" 
     file="/HotelManagementSystem/src/com/hms/model/Room.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1465" y="2078"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -192,7 +174,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="22" language="java" name="com.hms.model.CustomerModel" project="HotelManagementSystem" 
+  <class id="20" language="java" name="com.hms.model.CustomerModel" project="HotelManagementSystem" 
     file="/HotelManagementSystem/src/com/hms/model/CustomerModel.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="366" y="1342"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -201,7 +183,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="23" language="java" name="com.hms.model.FoodInventory" project="HotelManagementSystem" 
+  <class id="21" language="java" name="com.hms.model.FoodInventory" project="HotelManagementSystem" 
     file="/HotelManagementSystem/src/com/hms/model/FoodInventory.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1655" y="1843"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -210,7 +192,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="24" language="java" name="com.hms.model.CateringStaff" project="HotelManagementSystem" 
+  <class id="22" language="java" name="com.hms.model.CateringStaff" project="HotelManagementSystem" 
     file="/HotelManagementSystem/src/com/hms/model/CateringStaff.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="376" y="553"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -219,7 +201,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="25" language="java" name="com.hms.model.Bill" project="HotelManagementSystem" 
+  <class id="23" language="java" name="com.hms.model.Bill" project="HotelManagementSystem" 
     file="/HotelManagementSystem/src/com/hms/model/Bill.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="819" y="1703"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -228,7 +210,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="26" language="java" name="com.hms.model.CreditCardTable" project="HotelManagementSystem" 
+  <class id="24" language="java" name="com.hms.model.CreditCardTable" project="HotelManagementSystem" 
     file="/HotelManagementSystem/src/com/hms/model/CreditCardTable.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1491" y="2881"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -237,7 +219,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="27" language="java" name="com.hms.controller.CustomerController" project="HotelManagementSystem" 
+  <class id="25" language="java" name="com.hms.controller.CustomerController" project="HotelManagementSystem" 
     file="/HotelManagementSystem/src/com/hms/controller/CustomerController.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="719" y="1033"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -246,7 +228,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="28" language="java" name="com.hms.controller.RoomBookingController" project="HotelManagementSystem" 
+  <class id="26" language="java" name="com.hms.controller.RoomBookingController" project="HotelManagementSystem" 
     file="/HotelManagementSystem/src/com/hms/controller/RoomBookingController.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1481" y="2414"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -255,7 +237,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="29" language="java" name="com.hms.controller.ManageFoodInvController" project="HotelManagementSystem" 
+  <class id="27" language="java" name="com.hms.controller.ManageFoodInvController" project="HotelManagementSystem" 
     file="/HotelManagementSystem/src/com/hms/controller/ManageFoodInvController.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1865" y="1433"/>    
@@ -265,7 +247,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="30" language="java" name="com.hms.controller.HouseKeepingController" project="HotelManagementSystem" 
+  <class id="28" language="java" name="com.hms.controller.HouseKeepingController" project="HotelManagementSystem" 
     file="/HotelManagementSystem/src/com/hms/controller/HouseKeepingController.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1416" y="1178"/>    
@@ -275,7 +257,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="31" language="java" name="com.hms.controller.PaymentController" project="HotelManagementSystem" 
+  <class id="29" language="java" name="com.hms.controller.PaymentController" project="HotelManagementSystem" 
     file="/HotelManagementSystem/src/com/hms/controller/PaymentController.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1886" y="2765"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -284,7 +266,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="32" language="java" name="com.hms.controller.CateringController" project="HotelManagementSystem" 
+  <class id="30" language="java" name="com.hms.controller.CateringController" project="HotelManagementSystem" 
     file="/HotelManagementSystem/src/com/hms/controller/CateringController.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1967" y="988"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -293,7 +275,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="33" language="java" name="com.hms.controller.OrderFoodController" project="HotelManagementSystem" 
+  <class id="31" language="java" name="com.hms.controller.OrderFoodController" project="HotelManagementSystem" 
     file="/HotelManagementSystem/src/com/hms/controller/OrderFoodController.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="671" y="1370"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -302,7 +284,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="34" language="java" name="com.hms.controller.ManageSupplyInvController" project="HotelManagementSystem" 
+  <class id="32" language="java" name="com.hms.controller.ManageSupplyInvController" project="HotelManagementSystem" 
     file="/HotelManagementSystem/src/com/hms/controller/ManageSupplyInvController.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1861" y="1634"/>    
@@ -312,207 +294,260 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="35" language="java" name="com.hms.controller.Driver" project="HotelManagementSystem" 
-    file="/HotelManagementSystem/src/com/hms/controller/Driver.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="875" y="571"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <generalization id="36">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="7"/>  
-  </generalization>  
-  <association id="37">    
-    <end type="SOURCE" refId="33" navigable="false">      
-      <attribute id="38" name="foodList">        
-        <position height="17" width="47" x="512" y="1544"/>      
+  <association id="33">    
+    <end type="SOURCE" refId="32" navigable="false">      
+      <attribute id="34" name="inventoryList">        
+        <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="39" minimum="0" maximum="2147483647"/>    
+      <multiplicity id="35" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="18" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
+  <association id="36">    
+    <end type="SOURCE" refId="26" navigable="false">      
+      <attribute id="37" name="creditCardList">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="38" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="24" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="39">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="3"/>  
+  </generalization>  
   <association id="40">    
     <end type="SOURCE" refId="28" navigable="false">      
-      <attribute id="41" name="paymentPageModel"/>      
-      <multiplicity id="42" minimum="0" maximum="1"/>    
+      <attribute id="41" name="view1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="42" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
-    <end type="TARGET" refId="16" navigable="true"/>    
+    <end type="TARGET" refId="12" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="43">    
-    <end type="SOURCE" refId="29" navigable="false">      
-      <attribute id="44" name="inventoryList"/>      
-      <multiplicity id="45" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="20" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="46">    
-    <end type="SOURCE" refId="33" navigable="false">      
-      <attribute id="47" name="_cust"/>      
-      <multiplicity id="48" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="22" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="49">    
-    <end type="SOURCE" refId="15"/>    
-    <end type="TARGET" refId="7"/>  
+  <generalization id="43">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="6"/>  
   </generalization>  
-  <generalization id="50">    
-    <end type="SOURCE" refId="9"/>    
-    <end type="TARGET" refId="7"/>  
-  </generalization>  
-  <association id="51">    
-    <end type="SOURCE" refId="32" navigable="false">      
-      <attribute id="52" name="view1"/>      
-      <multiplicity id="53" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="15" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="54">    
-    <end type="SOURCE" refId="34" navigable="false">      
-      <attribute id="55" name="inventoryList"/>      
-      <multiplicity id="56" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="20" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="57">    
-    <end type="SOURCE" refId="31" navigable="false">      
-      <attribute id="58" name="paymentPageModel"/>      
-      <multiplicity id="59" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="16" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="60">    
-    <end type="SOURCE" refId="28" navigable="false">      
-      <attribute id="61" name="roomTableList"/>      
-      <multiplicity id="62" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="17" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="63">    
-    <end type="SOURCE" refId="28" navigable="false">      
-      <attribute id="64" name="creditCardList"/>      
-      <multiplicity id="65" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="26" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="66">    
+  <association id="44">    
     <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="67" name="uniqueInstance"/>      
-      <multiplicity id="68" minimum="0" maximum="1"/>    
+      <attribute id="45" name="uniqueInstance">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="46" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="69">    
-    <end type="SOURCE" refId="23"/>    
-    <end type="TARGET" refId="20"/>  
+  <association id="47">    
+    <end type="SOURCE" refId="29" navigable="false">      
+      <attribute id="48" name="creditCardList">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="49" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="24" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="50">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="6"/>  
   </generalization>  
-  <generalization id="70">    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="8"/>  
-  </generalization>  
-  <generalization id="71">    
-    <end type="SOURCE" refId="11"/>    
-    <end type="TARGET" refId="7"/>  
-  </generalization>  
-  <association id="72">    
-    <end type="SOURCE" refId="33" navigable="false">      
-      <attribute id="73" name="modelFood">        
+  <association id="51">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="52" name="view1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="53" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="54">    
+    <end type="SOURCE" refId="31" navigable="false">      
+      <attribute id="55" name="modelFood">        
         <position height="17" width="62" x="492" y="1567"/>      
       </attribute>      
-      <multiplicity id="74" minimum="0" maximum="1"/>    
+      <multiplicity id="56" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="57">    
+    <end type="SOURCE" refId="31" navigable="false">      
+      <attribute id="58" name="foodList">        
+        <position height="17" width="47" x="512" y="1544"/>      
+      </attribute>      
+      <multiplicity id="59" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="60">    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="18"/>  
+  </generalization>  
+  <generalization id="61">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="6"/>  
+  </generalization>  
+  <association id="62">    
+    <end type="SOURCE" refId="26" navigable="false">      
+      <attribute id="63" name="paymentPageModel">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="64" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="65">    
+    <end type="SOURCE" refId="29" navigable="false">      
+      <attribute id="66" name="paymentPageModel">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="67" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="68">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="6"/>  
+  </generalization>  
+  <association id="69">    
+    <end type="SOURCE" refId="31" navigable="false">      
+      <attribute id="70" name="custBill">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="71" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="23" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="72">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="6"/>  
+  </generalization>  
+  <association id="73">    
+    <end type="SOURCE" refId="30" navigable="false">      
+      <attribute id="74" name="view1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="75" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="76">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="4"/>  
+  </generalization>  
+  <association id="77">    
+    <end type="SOURCE" refId="26" navigable="false">      
+      <attribute id="78" name="roomTableList">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="79" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="80">    
+    <end type="SOURCE" refId="27" navigable="false">      
+      <attribute id="81" name="inventoryList">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="82" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="18" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="75">    
-    <end type="SOURCE" refId="33" navigable="false">      
-      <attribute id="76" name="custBill"/>      
-      <multiplicity id="77" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="25" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="78">    
-    <end type="SOURCE" refId="22"/>    
-    <end type="TARGET" refId="5"/>  
-  </generalization>  
-  <generalization id="79">    
-    <end type="SOURCE" refId="24"/>    
-    <end type="TARGET" refId="5"/>  
-  </generalization>  
-  <generalization id="80">    
-    <end type="SOURCE" refId="19"/>    
-    <end type="TARGET" refId="20"/>  
-  </generalization>  
-  <association id="81">    
-    <end type="SOURCE" refId="27" navigable="false">      
-      <attribute id="82" name="viewCustomer">        
-        <position height="17" width="76" x="745" y="961"/>      
-      </attribute>      
-      <multiplicity id="83" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="9" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="84">    
-    <end type="SOURCE" refId="10"/>    
+  <generalization id="83">    
+    <end type="SOURCE" refId="2"/>    
     <end type="TARGET" refId="7"/>  
+  </generalization>  
+  <generalization id="84">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="6"/>  
   </generalization>  
   <generalization id="85">    
-    <end type="SOURCE" refId="12"/>    
-    <end type="TARGET" refId="8"/>  
-  </generalization>  
-  <generalization id="86">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="4"/>  
-  </generalization>  
-  <generalization id="87">    
-    <end type="SOURCE" refId="14"/>    
+    <end type="SOURCE" refId="11"/>    
     <end type="TARGET" refId="7"/>  
   </generalization>  
+  <generalization id="86">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="18"/>  
+  </generalization>  
+  <generalization id="87">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="4"/>  
+  </generalization>  
   <association id="88">    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="89" name="view1"/>      
-      <multiplicity id="90" minimum="0" maximum="1"/>    
+    <end type="SOURCE" refId="25" navigable="false">      
+      <attribute id="89" name="viewCustomer">        
+        <position height="17" width="76" x="745" y="961"/>      
+      </attribute>      
+      <multiplicity id="90" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="8" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="91">    
-    <end type="SOURCE" refId="30" navigable="false">      
-      <attribute id="92" name="view1"/>      
-      <multiplicity id="93" minimum="0" maximum="1"/>    
+    <end type="SOURCE" refId="31" navigable="false">      
+      <attribute id="92" name="_cust">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="93" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
-    <end type="TARGET" refId="14" navigable="true"/>    
+    <end type="TARGET" refId="20" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="94">    
-    <end type="SOURCE" refId="31" navigable="false">      
-      <attribute id="95" name="creditCardList"/>      
-      <multiplicity id="96" minimum="0" maximum="2147483647"/>    
+    <end type="SOURCE" refId="26" navigable="false">      
+      <attribute id="95" name="roomBookingModel">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="96" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
-    <end type="TARGET" refId="26" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="97">    
-    <end type="SOURCE" refId="28" navigable="false">      
-      <attribute id="98" name="roomBookingModel"/>      
-      <multiplicity id="99" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="21" navigable="true"/>    
+    <end type="TARGET" refId="19" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
