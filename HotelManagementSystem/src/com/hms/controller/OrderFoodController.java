@@ -106,9 +106,18 @@ public class OrderFoodController implements ActionListener{
 				paymentPageView.getFrame().setVisible(true);
 				//System.out.println(Double.toString(totalPrice));
 				paymentPageView.getAmountLabel().setText(Double.toString(b));
+				
 			}
 			else{
 				viewOrderFood.getLblStatus().setText("Bill has been added to your account");
+				JOptionPane.showMessageDialog(viewOrderFood.frame, "Bill has been added to your account");
+				
+				viewOrderFood.frame.setVisible(false);
+				//show main screen	
+				UserRole screen= new CustomerView();
+				screen.userScreen();
+				CustomerController customerController = new CustomerController((CustomerView)screen);
+				customerController.control();
 			}
 			System.out.println("In Go Ahead!");
 			viewOrderFood.getPanelReview().setVisible(false);
@@ -141,13 +150,8 @@ public class OrderFoodController implements ActionListener{
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}*/
-			JOptionPane.showMessageDialog(viewOrderFood.frame, "Bill has been added to your account");
-			viewOrderFood.frame.setVisible(false);
-			//show main screen	
-			UserRole screen= new CustomerView();
-			screen.userScreen();
-			CustomerController customerController = new CustomerController((CustomerView)screen);
-			customerController.control();
+			
+			
 		}
 		//Go Back
 		if(action.equalsIgnoreCase("Go Back")){

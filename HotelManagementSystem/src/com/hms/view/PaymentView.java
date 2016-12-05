@@ -89,6 +89,7 @@ public class PaymentView {
 		frame.setBounds(200, 150, 600, 500);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
+		frame.setLocation(450, 200);
 		
 		JPanel panel = new JPanel();
 		panel.setBackground(SystemColor.window);

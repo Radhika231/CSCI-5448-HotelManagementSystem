@@ -146,6 +146,7 @@ public class RoomBookingView {
 		frame.setBounds(0,0,1000,768);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
+		frame.setLocation(300, 50);
 		
 		JPanel panel = new JPanel();
 		panel.setBounds(12, 5, 976, 55);

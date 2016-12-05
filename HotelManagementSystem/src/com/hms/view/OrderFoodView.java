@@ -35,6 +35,7 @@ import java.awt.Font;
 public class OrderFoodView {
 
 	public JFrame frame;
+
 	
 	//button
 	private JButton btnConfirmOrder;
@@ -99,6 +100,7 @@ public class OrderFoodView {
 		frame.setBounds(0, 0, 1000, 500);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
+		frame.setLocation(300, 150);
 			
 		lblMenu = new JLabel("MENU");
 		lblMenu.setFont(new Font("Purisa", Font.BOLD, 24));

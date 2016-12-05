@@ -33,6 +33,8 @@ public class CustomerView extends UserRole {
 		p.setBackground(Color.DARK_GRAY);
 		p.setLayout(null);
 		
+		frame.setLocation(500, 200);
+		
 		makeReserv=new JButton("Make Reservation");
 		makeReserv.setForeground(Color.BLUE);
 		makeReserv.setBounds(67, 58, 204, 49);

@@ -17,6 +17,7 @@ public class LoginView
 	{
 		frame=new JFrame("Home Page");
 		frame.getContentPane().setLayout(new BorderLayout());
+		frame.setLocation(550, 250);
 		
 		username=new JLabel("User Name:");
 		username.setBounds(111, 68, 150, 25);
