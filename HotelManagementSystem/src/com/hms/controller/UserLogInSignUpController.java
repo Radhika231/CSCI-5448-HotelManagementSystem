@@ -15,7 +15,6 @@ import com.hms.model.*;
 public class UserLogInSignUpController implements ActionListener 
 {
 		private LoginView view1;
-		
 		public Text user_name;
 		
 		public UserLogInSignUpController()
@@ -40,7 +39,7 @@ public class UserLogInSignUpController implements ActionListener
 			 String command = ((JButton) actionEvent.getSource()).getActionCommand();
 			 if(command=="Login")
 			 {
-				 AuthenticateLogin auth=new AuthenticateLogin(view1);
+				 AuthenticateLogin auth=new AuthenticateLogin(this.view1);
 			 }
 			 
 			 else if(command=="Sign Up")

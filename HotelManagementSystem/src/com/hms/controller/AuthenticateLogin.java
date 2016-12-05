@@ -27,9 +27,9 @@ public class AuthenticateLogin extends UserLogInSignUpController
 	    	 if(!result.equals(null))
 	    	 {
 	    		 view1.frame.setVisible(false);
-	    		 Login l=Login.getInstance(view1); //singleton design pattern
+	    		 Login login=Login.getInstance(); //singleton design pattern
 	    		 
-	    		 l.startSession(result);
+	    		 login.startSession(result);
 	    	 }
 	    	 else
 	    	 {

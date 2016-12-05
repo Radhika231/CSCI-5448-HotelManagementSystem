@@ -30,7 +30,7 @@ public class CustomerView extends UserRole {
 	public void userScreen()
 	{
 		ImageIcon iconX = new ImageIcon(getClass().getResource("/images/hotelimage1.jpg"));
-		JFrame frame=new JFrame("Customer Home Screen");
+		frame=new JFrame("Customer Home Screen");
 		Panel p=new Panel();
 		p.setBackground(new Color(240, 230, 140));
 		p.setLayout(null);
@@ -70,7 +70,7 @@ public class CustomerView extends UserRole {
 		p.add(panel);
 		panel.setLayout(null);
 		
-		JButton btnLogout = new JButton("Logout");
+		btnLogout = new JButton("Logout");
 		btnLogout.setBounds(599, 16, 118, 24);
 		panel.add(btnLogout);
 		btnLogout.setBackground(new Color(255, 255, 255));

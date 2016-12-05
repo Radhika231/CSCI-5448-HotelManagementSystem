@@ -5,9 +5,9 @@ import com.hms.model.*;
 
 //Concrete Class for factory design pattern to instantiate UserRole screen according to user role
 //Object instantiation is deferred to sub classes
-public class loginUserRoleFactory {
+public class LoginUserRoleFactory {
 
-	public loginUserRoleFactory(String role)
+	public LoginUserRoleFactory(String role)
 	{
 	     //Factory Design Pattern
 		 if(role.equals("Customer"))
