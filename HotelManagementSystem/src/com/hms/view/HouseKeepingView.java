@@ -23,6 +23,7 @@ public class HouseKeepingView extends UserRole {
 	{
 		ImageIcon iconX = new ImageIcon(getClass().getResource("/images/hotelimage1.jpg"));
 		frame=new JFrame("HouseKeeping Staff Home Screen");
+		frame.setBounds(600, 200, 450, 300);
 		Panel p=new Panel();
 		p.setBackground(new Color(240, 230, 140));
 		p.setLayout(null);
