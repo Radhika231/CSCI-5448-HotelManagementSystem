@@ -217,8 +217,10 @@ public class RoomBookingController implements ActionListener{
 		// TODO Auto-generated method stub
 		if(b)
 		{
-			roomBookingModel.updateRoomTable(staticSession,staticShowAvailtable,staticCheckIn,staticCheckOut);
-			staticSession.close();
+			if(roomBookingModel != null){
+				roomBookingModel.updateRoomTable(staticSession,staticShowAvailtable,staticCheckIn,staticCheckOut);
+				staticSession.close();
+			}
 		}
 			
 			

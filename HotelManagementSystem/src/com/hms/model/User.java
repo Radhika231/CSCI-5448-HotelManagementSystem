@@ -31,6 +31,9 @@ public class User
 	int failedLogins=0;
 	
 	
+	public User(){
+		
+	}
 	public void setUserDetails(String first_name,String last_name,String user_name,String password,String email_id,String phone_no,String gender,String user_role,int failedLogins)
 	{
 		this.first_name=first_name;

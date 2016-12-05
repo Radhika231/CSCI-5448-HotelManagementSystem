@@ -2,7 +2,7 @@ package com.hms.controller;
 
 import com.hms.view.*;
 import com.hms.model.*;
-import com.hms.view.Customer;
+import com.hms.view.CustomerView;
 
 //Concrete Class for factory design pattern to instantiate UserRole screen according to user role
 //Object instantiation is deferred to sub classes
@@ -13,8 +13,10 @@ public class loginUserRoleFactory {
 	     //Factory Design Pattern
 		 if(role.equals("Customer"))
 		 {
-			UserRole screen= new Customer();
+			UserRole screen= new CustomerView();
 			screen.userScreen();
+			CustomerController customerController = new CustomerController((CustomerView)screen);
+			customerController.control();
 		 }
 		 else if(role.equals("Manager"))
 		 {

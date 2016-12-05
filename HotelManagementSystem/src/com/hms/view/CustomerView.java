@@ -10,9 +10,20 @@ import javax.swing.JFrame;
 import com.hms.model.UserRole;
 
 //Factory Design Pattern
-public class Customer extends UserRole {
+public class CustomerView extends UserRole {
+	
+	private JButton makeReserv;
+	private JButton orderFood;
 	
 	//Display home screen for customer using factory method
+	/**
+	 * @wbp.parser.entryPoint
+	 */
+	
+	/*public CustomerView(){
+		userScreen();
+	}*/
+	
 	public void userScreen()
 	{
 		JFrame frame=new JFrame("Customer Home Screen");
@@ -20,11 +31,11 @@ public class Customer extends UserRole {
 		p.setBackground(Color.DARK_GRAY);
 		p.setLayout(null);
 		
-		JButton makeReserv=new JButton("Make Reservation");
+		makeReserv=new JButton("Make Reservation");
 		makeReserv.setForeground(Color.BLUE);
 		makeReserv.setBounds(67, 58, 204, 49);
 		
-		JButton orderFood=new JButton("Order Food");
+		orderFood=new JButton("Order Food");
 		orderFood.setForeground(Color.BLUE);
 		orderFood.setBounds(404, 58, 204, 49);
 		
@@ -51,5 +62,13 @@ public class Customer extends UserRole {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(727, 447);
 		frame.setVisible(true);
+	}
+
+	public JButton getMakeReserv() {
+		return makeReserv;
+	}
+
+	public JButton getOrderFood() {
+		return orderFood;
 	}
 }

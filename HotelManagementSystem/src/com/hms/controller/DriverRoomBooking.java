@@ -10,7 +10,7 @@ import javax.swing.JFrame;
  * @author meher
  *
  */
-public class RoomBookingDriver {
+public class DriverRoomBooking {
 
 		
 	/**

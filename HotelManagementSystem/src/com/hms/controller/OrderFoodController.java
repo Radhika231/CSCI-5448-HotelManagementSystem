@@ -1,7 +1,7 @@
 package com.hms.controller;
 import com.hms.view.*;
 import com.hms.model.*;
-import com.hms.model.Customer;
+import com.hms.model.CustomerModel;
 
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
@@ -19,12 +19,12 @@ public class OrderFoodController implements ActionListener{
 	private ActionListener actionListener;
 	private OrderFoodView viewOrderFood;
 	private Food modelFood;
-	private Customer _cust;
+	private CustomerModel _cust;
 	ArrayList<Food> foodList = new ArrayList<Food>();
 	private Bill custBill;
 	private double b;
 	
-	public OrderFoodController(OrderFoodView viewOrderFood, Food modelFood, Customer _cust) {
+	public OrderFoodController(OrderFoodView viewOrderFood, Food modelFood, CustomerModel _cust) {
 		super();
 		this.viewOrderFood = viewOrderFood;
 		this.modelFood = modelFood;

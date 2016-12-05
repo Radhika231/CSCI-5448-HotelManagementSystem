@@ -20,6 +20,9 @@ import com.hms.controller.*;
 //@Table(name="FoodInventory")
 public class FoodInventory extends Inventory
 {
+	public FoodInventory(){
+		
+	}
     //Method to get the inventory details from Food Inventory table in the database
 	public List<Inventory> getInventoryTable()
 	{
