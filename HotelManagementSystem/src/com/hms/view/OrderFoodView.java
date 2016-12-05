@@ -285,7 +285,7 @@ public class OrderFoodView {
 		panelDone.add(lblStatus);
 		
 		JLabel lblLogo = new JLabel("");
-		lblLogo.setIcon(new ImageIcon("/home/subir/Downloads/chaat.jpeg"));
+		lblLogo.setIcon(new ImageIcon(OrderFoodView.class.getResource("/images/chaat.jpeg")));
 		lblLogo.setBounds(0, -23, 1000, 251);
 		frame.getContentPane().add(lblLogo);
 		btnGoAhead.setVisible(false);

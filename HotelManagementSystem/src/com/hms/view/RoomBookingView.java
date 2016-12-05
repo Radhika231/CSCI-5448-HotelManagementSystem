@@ -164,7 +164,7 @@ public class RoomBookingView {
 		panel_1.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("/home/subir/git/CSCI-5448-HotelManagementSystem/HotelManagementSystem/38849817-H1-Exterior_1-16x7.jpg"));
+		lblNewLabel.setIcon(new ImageIcon(RoomBookingView.class.getResource("/images/38849817-H1-Exterior_1-16x7.jpg")));
 		lblNewLabel.setBounds(0, 0, 976, 155);
 		panel_1.add(lblNewLabel);
 		
