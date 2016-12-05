@@ -1,4 +1,4 @@
-package com.hms.controller;
+package com.hms.model;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;

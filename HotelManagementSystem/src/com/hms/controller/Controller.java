@@ -18,6 +18,7 @@ public class Controller implements ActionListener
 {
 		private HomePage view1;
 		private SignUp view2;
+		private LoginView view3;
 		
 		public Text user_name;
 
@@ -65,7 +66,7 @@ public class Controller implements ActionListener
 			 		
 			    	 if(!results.isEmpty())
 			    	 {
-			    		 Login l=Login.getInstance(); //singleton design pattern
+			    		 Login l=Login.getInstance(view3); //singleton design pattern
 			    		 l.startSession(results.get(0));
 			    		
 			    	 }

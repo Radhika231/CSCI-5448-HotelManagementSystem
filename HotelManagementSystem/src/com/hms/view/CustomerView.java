@@ -14,6 +14,8 @@ public class CustomerView extends UserRole {
 	
 	private JButton makeReserv;
 	private JButton orderFood;
+	private JButton btnLogout;
+	public JFrame frame;
 	
 	//Display home screen for customer using factory method
 	/**
@@ -26,7 +28,7 @@ public class CustomerView extends UserRole {
 	
 	public void userScreen()
 	{
-		JFrame frame=new JFrame("Customer Home Screen");
+		frame=new JFrame("Customer Home Screen");
 		Panel p=new Panel();
 		p.setBackground(Color.DARK_GRAY);
 		p.setLayout(null);
@@ -47,7 +49,7 @@ public class CustomerView extends UserRole {
 		giveRating.setForeground(Color.BLUE);
 		giveRating.setBounds(404, 142, 204, 49);
 		
-		JButton btnLogout = new JButton("Logout");
+		btnLogout = new JButton("Logout");
 		btnLogout.setBounds(495, 336, 134, 39);
 	
 		
@@ -70,5 +72,9 @@ public class CustomerView extends UserRole {
 
 	public JButton getOrderFood() {
 		return orderFood;
+	}
+
+	public JButton getBtnLogout() {
+		return btnLogout;
 	}
 }

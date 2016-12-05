@@ -19,7 +19,8 @@ public class CustomerController implements ActionListener{
 	}
 	public void control(){
 		viewCustomer.getMakeReserv().addActionListener(this);
-		viewCustomer.getOrderFood().addActionListener(this);		
+		viewCustomer.getOrderFood().addActionListener(this);
+		viewCustomer.getBtnLogout().addActionListener(this);
 	}
 
 	@Override
@@ -29,6 +30,7 @@ public class CustomerController implements ActionListener{
 		
 		//order food
 		if(action.equalsIgnoreCase("Order Food")){
+			viewCustomer.frame.setVisible(false);
 			OrderFoodView orderFoodView = new OrderFoodView();
 			orderFoodView.frame.setVisible(true);
 			
@@ -40,6 +42,7 @@ public class CustomerController implements ActionListener{
 		
 		//Room booking
 		if(action.equalsIgnoreCase("Make Reservation")){
+			viewCustomer.frame.setVisible(false);
 			RoomBookingView roomBookingView = new RoomBookingView();
 			roomBookingView.getFrame().setVisible(true);
 			
@@ -48,6 +51,11 @@ public class CustomerController implements ActionListener{
 			
 			roomBookingView.getFrame().setVisible(true);
 			roomBookingController.roomBookingControl();
+		}
+		
+		//Logout
+		if(action.equalsIgnoreCase("Logout")){
+			System.exit(0);
 		}
 	}//Action performed ends
 }

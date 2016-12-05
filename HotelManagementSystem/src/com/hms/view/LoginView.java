@@ -4,7 +4,7 @@ import javax.swing.*;
 
 public class LoginView 
 {
-	private JFrame frame;
+	public JFrame frame;
 	private JLabel username,password;
 	private final JTextField in_username;
 	private final JPasswordField in_password;
@@ -19,29 +19,30 @@ public class LoginView
 		frame.getContentPane().setLayout(new BorderLayout());
 		
 		username=new JLabel("User Name:");
-		username.setBounds(50, 10, 150, 25);
+		username.setBounds(111, 68, 150, 25);
 		username.setFont(new Font("Serif", Font.PLAIN, 20));
 		
 		
 		password=new JLabel("Password:");
-		password.setBounds(50, 40, 150, 25);
+		password.setBounds(111, 98, 150, 25);
 		password.setFont(new Font("Serif", Font.PLAIN, 20));
 		
 		in_username=new JTextField(15);
-		in_username.setBounds(150, 10, 160, 25);
+		in_username.setBounds(253, 70, 160, 25);
 
 		
 		in_password=new JPasswordField(15);
-		in_password.setBounds(150, 40, 160, 25);
+		in_password.setBounds(253, 105, 160, 25);
 		
 		Panel p=new Panel();
+		p.setBackground(new Color(255, 255, 255));
 		p.setLayout(null);
 		
 		login=new JButton("Login");
-		login.setBounds(50, 70, 100, 25);
+		login.setBounds(111, 150, 100, 25);
 		
 		signup=new JButton("Sign Up");
-		signup.setBounds(200, 70, 100, 25);
+		signup.setBounds(261, 150, 100, 25);
 		
 		p.add(username);
 		p.add(in_username);
@@ -50,7 +51,7 @@ public class LoginView
 		p.add(login);
 		p.add(signup);
 		
-		frame.add(p,BorderLayout.CENTER);
+		frame.getContentPane().add(p,BorderLayout.CENTER);
 		
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(500, 300);

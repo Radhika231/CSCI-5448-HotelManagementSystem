@@ -1,12 +1,13 @@
 package com.hms.controller;
 import com.hms.view.*;
 import com.hms.model.*;
-import com.hms.model.CustomerModel;
 
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+
+import javax.swing.JOptionPane;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -49,10 +50,20 @@ public class OrderFoodController implements ActionListener{
 		
 		//Check boxes
 		if(action.equalsIgnoreCase("Take Away")){
-			viewOrderFood.getChckbxDineIn().setVisible(false);
+			if(viewOrderFood.getChckbxTakeAway().isSelected()){
+				viewOrderFood.getChckbxDineIn().setVisible(false);
+			}
+			else{
+				viewOrderFood.getChckbxDineIn().setVisible(true);
+			}
 		}
 		if(action.equalsIgnoreCase("Dine In")){
-			viewOrderFood.getChckbxTakeAway().setVisible(false);
+			if(viewOrderFood.getChckbxDineIn().isSelected()){
+				viewOrderFood.getChckbxTakeAway().setVisible(false);
+			}
+			else{
+				viewOrderFood.getChckbxTakeAway().setVisible(true);
+			}
 		}
 		if(!(viewOrderFood.getChckbxDineIn().isSelected()) && !(viewOrderFood.getChckbxTakeAway().isSelected())){
 			viewOrderFood.getChckbxDineIn().setVisible(true);
@@ -79,6 +90,7 @@ public class OrderFoodController implements ActionListener{
 		//Cancel
 		if(action.equalsIgnoreCase("Cancel")){
 			System.out.println("In Cancel!");
+			System.exit(0);
 			
 			//go to main screen			
 		}
@@ -122,13 +134,30 @@ public class OrderFoodController implements ActionListener{
 			session.close();
 			sessionFactory.close();
 			
-			//Thread.sleep(5000);
-			//show main screen					
+			
+			/*try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}*/
+			JOptionPane.showMessageDialog(viewOrderFood.frame, "Bill has been added to your account");
+			viewOrderFood.frame.setVisible(false);
+			//show main screen	
+			UserRole screen= new CustomerView();
+			screen.userScreen();
+			CustomerController customerController = new CustomerController((CustomerView)screen);
+			customerController.control();
 		}
 		//Go Back
 		if(action.equalsIgnoreCase("Go Back")){
+			viewOrderFood.frame.setVisible(false);
 			System.out.println("In Go Back!");
-			//go to main screen									
+			//go to main screen	
+			UserRole screen= new CustomerView();
+			screen.userScreen();
+			CustomerController customerController = new CustomerController((CustomerView)screen);
+			customerController.control();
 		}
 				
 		

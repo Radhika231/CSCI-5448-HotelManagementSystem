@@ -26,7 +26,9 @@ public class AuthenticateLogin extends UserLogInSignUpController
 
 	    	 if(!result.equals(null))
 	    	 {
-	    		 Login l=Login.getInstance(); //singleton design pattern
+	    		 view1.frame.setVisible(false);
+	    		 Login l=Login.getInstance(view1); //singleton design pattern
+	    		 
 	    		 l.startSession(result);
 	    	 }
 	    	 else
@@ -34,6 +36,10 @@ public class AuthenticateLogin extends UserLogInSignUpController
 	    		 //inserts Failed logins
 	    		 insertFailedLogins(user);
 	    		 System.out.println("Login Failed");
+	    		 view1.frame.setVisible(false);
+	    		 LoginView home=new LoginView();  //Display Login view for user to login
+	    		 UserLogInSignUpController c =new UserLogInSignUpController(home);  //Pass view to controller
+	    		 c.control(); // Inform controller about button clicks to return new view
 	    	 }
 			/* //List<String>results=authenticateUser(user,password);
 			 

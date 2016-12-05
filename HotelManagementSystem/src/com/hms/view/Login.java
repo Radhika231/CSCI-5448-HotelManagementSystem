@@ -1,5 +1,7 @@
 package com.hms.view;
 
+import javax.swing.JOptionPane;
+
 import com.hms.controller.*;
 
 //Singleton Design Pattern
@@ -13,11 +15,14 @@ public class Login extends LoginView
     	 
      }
      
-     public static Login getInstance()
+     public static Login getInstance(LoginView view)
      {
     	 if(uniqueInstance==null)
     	 {
     		 uniqueInstance=new Login();
+    	 }
+    	 else{
+    		 JOptionPane.showMessageDialog(view.frame, "An Instance of this user is already running");
     	 }
     	 return uniqueInstance;
      }
