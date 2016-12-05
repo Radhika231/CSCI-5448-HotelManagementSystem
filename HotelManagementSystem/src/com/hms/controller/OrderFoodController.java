@@ -106,6 +106,7 @@ public class OrderFoodController implements ActionListener{
 				paymentPageView.getFrame().setVisible(true);
 				//System.out.println(Double.toString(totalPrice));
 				paymentPageView.getAmountLabel().setText(Double.toString(b));
+				viewOrderFood.frame.setVisible(false);
 				
 			}
 			else{

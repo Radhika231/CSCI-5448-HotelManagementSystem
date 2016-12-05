@@ -32,7 +32,6 @@ public class Login extends LoginView
      //no point keeping this function static. defies the purpose actually
      public static void startSession(String role)
      {
-    	 System.out.println("Printing the Role: "+role);
     	 LoginUserRoleFactory urole=new LoginUserRoleFactory(role);
     	
      }

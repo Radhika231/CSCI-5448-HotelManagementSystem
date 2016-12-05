@@ -18,18 +18,13 @@ public class CustomerController implements ActionListener{
 		viewCustomer = view;
 	}
 	public void control(){
-		System.out.println("here 1");
 		viewCustomer.getMakeReserv().addActionListener(this);
-		System.out.println("here 2");
 		viewCustomer.getOrderFood().addActionListener(this);
-		System.out.println("here 3");
-		//viewCustomer.getBtnLogout().addActionListener(this);
-		System.out.println("here 4");
+		viewCustomer.getBtnLogout().addActionListener(this);
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent actionEvent) {
-		System.out.println("here 5");
 		String action = actionEvent.getActionCommand().toString();//((JButton) actionEvent.getSource()).getActionCommand();
 		System.out.println("Action : " + action);
 		

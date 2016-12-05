@@ -116,12 +116,18 @@ public class PaymentController implements ActionListener {
 			else
 			{
 				System.out.println("Payment Successful, Enjoy your Stay");
-				JOptionPane.showMessageDialog(frame, "Payment Successful, Enjoy your Stay");
+				JOptionPane.showMessageDialog(frame, "Payment Successful, Have a good day!");
 				totalPrice = Double.parseDouble((String)(paymentPageView.getAmountLabel().getText()));
 				paymentPageModel.updateCardTable(session,cardNumber,totalPrice);
 				paymentPageView.getFrame().setVisible(false);
 				session.close();
 				RoomBookingController.updatedB(true);
+				
+				//show main screen	
+				UserRole screen= new CustomerView();
+				screen.userScreen();
+				CustomerController customerController = new CustomerController((CustomerView)screen);
+				customerController.control();
 				
 			}
 		}

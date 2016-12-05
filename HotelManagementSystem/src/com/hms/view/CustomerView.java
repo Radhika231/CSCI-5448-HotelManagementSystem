@@ -34,6 +34,7 @@ public class CustomerView extends UserRole {
 		Panel p=new Panel();
 		p.setBackground(new Color(240, 230, 140));
 		p.setLayout(null);
+		frame.setLocation(400, 50);
 		
 		frame.getContentPane().add(p,BorderLayout.CENTER);
 		JLabel lblNewLabel = new JLabel(iconX);
@@ -71,7 +72,7 @@ public class CustomerView extends UserRole {
 		panel.setLayout(null);
 		
 		btnLogout = new JButton("Logout");
-		btnLogout.setBounds(599, 16, 118, 24);
+		btnLogout.setBounds(598, 16, 118, 24);
 		panel.add(btnLogout);
 		btnLogout.setBackground(new Color(255, 255, 255));
 		
