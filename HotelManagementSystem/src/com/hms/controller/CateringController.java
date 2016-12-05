@@ -58,7 +58,8 @@ public class CateringController implements ActionListener{
 			 case "SUBMIT":
 				 itemNum=upd.getItemNum();
 				 numSupplies=upd.getNumSupplies();
-				 updateFoodInventory(itemNum,numSupplies);
+				 FoodInventory food=new FoodInventory();
+				 food.updateInventory(itemNum, numSupplies);
 				 break;		
 			 case "HOME PAGE":
 				 Login.startSession("Catering");
@@ -67,21 +68,6 @@ public class CateringController implements ActionListener{
 	        	 break;
         	 		 
 		 }
-	}
-	
-	//Updates the Food Inventory
-	public void updateFoodInventory(int itemNum,int numSupplies)
-	{
-		 SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-    	 String hql = "Update FoodInventory set itemQuantity=:numSupplies where inventory_id=:itemNum";
-	 	 Session session = sessionFactory.openSession();
- 		 session.beginTransaction();
-    	 Query query = session.createQuery(hql);
-    	 query.setParameter("itemNum", itemNum);
-    	 query.setParameter("numSupplies", numSupplies);
-    	 query.executeUpdate();
-    	 session.close();
- 		 sessionFactory.close();
 	}
 	
 }

@@ -44,7 +44,6 @@ public class ManageSupplyInv {
 			{
 				for(Inventory inventory : inventoryList)
 				{	
-					System.out.println("Index:"+ index);
 					data[index][0]= inventory.getInventory_id();
 					data[index][1] = inventory.getItemName();
 					data[index][2] = inventory.getItemQuantity();

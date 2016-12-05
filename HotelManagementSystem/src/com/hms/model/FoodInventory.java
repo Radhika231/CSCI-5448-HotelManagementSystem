@@ -26,11 +26,10 @@ public class FoodInventory extends Inventory
     //Method to get the inventory details from Food Inventory table in the database
 	public List<Inventory> getInventoryTable()
 	{
-		 SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-    	 String hql = "FROM FoodInventory";
-	 	 Session session = sessionFactory.openSession();
+		 SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+		 Session session = sessionFactory.openSession();
  		 session.beginTransaction();
-    	 Query query = session.createQuery(hql);
+    	 Query query = session.createQuery("from FoodInventory");
     	 List<Inventory> inventoryList = ((org.hibernate.Query)query).list();   	
     	 session.close();
  		 sessionFactory.close();
@@ -40,13 +39,14 @@ public class FoodInventory extends Inventory
 	//Method to update food inventory in the database on click of update button
 	public void updateInventory(int itemNum,int numSupplies)
 	{
-		 SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+		 SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+		 Session session = sessionFactory.openSession();
     	 String hql = "Update FoodInventory set itemQuantity=:numSupplies where inventory_id=:itemNum";
-	 	 Session session = sessionFactory.openSession();
  		 session.beginTransaction();
     	 Query query = session.createQuery(hql);
     	 query.setParameter("itemNum", itemNum);
     	 query.setParameter("numSupplies", numSupplies);
+    	 query.executeUpdate();
     	 session.close();
  		 sessionFactory.close();
 	}
