@@ -69,6 +69,7 @@ public class ManageFoodInvController {
 	public void createFoodInventoryView(Object[][] data,String[] columns)
 	{
 		    JFrame frame=new JFrame("Food Inventory");
+			frame.setBounds(600, 250, 450, 300);
 	        JPanel mainPanel = new JPanel();
 	        mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
 

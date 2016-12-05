@@ -65,6 +65,7 @@ public class ManageSupplyInvController {
 	{
 		// TODO Auto-generated method stub
 		 JFrame frame=new JFrame("Supply Inventory");
+		 frame.setBounds(600, 250, 450, 300);
 	     JPanel mainPanel = new JPanel();
 	     mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
 
