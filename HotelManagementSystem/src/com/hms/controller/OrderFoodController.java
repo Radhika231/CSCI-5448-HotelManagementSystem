@@ -49,7 +49,7 @@ public class OrderFoodController implements ActionListener{
 		this.custBill = new Bill("Subir" + System.currentTimeMillis());
 		
 		//Check boxes
-		if(action.equalsIgnoreCase("Take Away")){
+		if(action.equalsIgnoreCase("Restaurant")){
 			if(viewOrderFood.getChckbxTakeAway().isSelected()){
 				viewOrderFood.getChckbxDineIn().setVisible(false);
 			}
@@ -57,7 +57,7 @@ public class OrderFoodController implements ActionListener{
 				viewOrderFood.getChckbxDineIn().setVisible(true);
 			}
 		}
-		if(action.equalsIgnoreCase("Dine In")){
+		if(action.equalsIgnoreCase("In-Room")){
 			if(viewOrderFood.getChckbxDineIn().isSelected()){
 				viewOrderFood.getChckbxTakeAway().setVisible(false);
 			}
@@ -97,22 +97,56 @@ public class OrderFoodController implements ActionListener{
 		//Go Ahead
 		if(action.equalsIgnoreCase("Go Ahead")){
 			viewOrderFood.getLblBill().setVisible(false);
-			if(viewOrderFood.getChckbxTakeAway().isSelected()){
-				//viewOrderFood.getLblStatus().setText("Please Pay at the cashier");
-				PaymentView paymentPageView = new PaymentView();
-				Payment paymentPageModel = new Payment();
-				PaymentController paymentController = new PaymentController(paymentPageView,paymentPageModel);
-				paymentController.paymentControl();
-				paymentPageView.getFrame().setVisible(true);
-				//System.out.println(Double.toString(totalPrice));
-				paymentPageView.getAmountLabel().setText(Double.toString(b));
-				viewOrderFood.frame.setVisible(false);
+			if(b > 0){
+				if(viewOrderFood.getChckbxTakeAway().isSelected()){
+					//viewOrderFood.getLblStatus().setText("Please Pay at the cashier");
+					PaymentView paymentPageView = new PaymentView();
+					Payment paymentPageModel = new Payment();
+					PaymentController paymentController = new PaymentController(paymentPageView,paymentPageModel);
+					paymentController.paymentControl();
+					paymentPageView.getFrame().setVisible(true);
+					//System.out.println(Double.toString(totalPrice));
+					paymentPageView.getAmountLabel().setText(Double.toString(b));
+					viewOrderFood.frame.setVisible(false);
+					
+				}
+				else{
+					viewOrderFood.getLblStatus().setText("Bill has been added to your account");
+					JOptionPane.showMessageDialog(viewOrderFood.frame, "Bill has been added to your account");
+					
+					viewOrderFood.frame.setVisible(false);
+					//show main screen	
+					UserRole screen= new CustomerView();
+					screen.userScreen();
+					CustomerController customerController = new CustomerController((CustomerView)screen);
+					customerController.control();
+				}
+				System.out.println("In Go Ahead!");
+				viewOrderFood.getPanelReview().setVisible(false);
+				viewOrderFood.getPanelEntree().setVisible(false);
+				viewOrderFood.getPanelSides().setVisible(false);
+				viewOrderFood.getPanelDone().setVisible(true);
+				viewOrderFood.getChckbxDineIn().setVisible(false);
+				viewOrderFood.getChckbxTakeAway().setVisible(false);
+				viewOrderFood.getLblMenu().setVisible(false);
+				
+				//System.out.println("In Controller" + b);
+				custBill.setBill(b);
+				System.out.println("In Controller " + custBill.getBill());
+				System.out.println("In Controller " + custBill.getCustName());
+				
+				
+				//hibernate - store bill
+				SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+				Session session = sessionFactory.openSession();
+				session.beginTransaction();
+				session.save(custBill);
+				session.getTransaction().commit();
+				session.close();
+				sessionFactory.close();
 				
 			}
 			else{
-				viewOrderFood.getLblStatus().setText("Bill has been added to your account");
-				JOptionPane.showMessageDialog(viewOrderFood.frame, "Bill has been added to your account");
-				
 				viewOrderFood.frame.setVisible(false);
 				//show main screen	
 				UserRole screen= new CustomerView();
@@ -120,29 +154,7 @@ public class OrderFoodController implements ActionListener{
 				CustomerController customerController = new CustomerController((CustomerView)screen);
 				customerController.control();
 			}
-			System.out.println("In Go Ahead!");
-			viewOrderFood.getPanelReview().setVisible(false);
-			viewOrderFood.getPanelEntree().setVisible(false);
-			viewOrderFood.getPanelSides().setVisible(false);
-			viewOrderFood.getPanelDone().setVisible(true);
-			viewOrderFood.getChckbxDineIn().setVisible(false);
-			viewOrderFood.getChckbxTakeAway().setVisible(false);
-			viewOrderFood.getLblMenu().setVisible(false);
 			
-			//System.out.println("In Controller" + b);
-			custBill.setBill(b);
-			System.out.println("In Controller " + custBill.getBill());
-			System.out.println("In Controller " + custBill.getCustName());
-			
-			
-			//hibernate - store bill
-			SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
-			Session session = sessionFactory.openSession();
-			session.beginTransaction();
-			session.save(custBill);
-			session.getTransaction().commit();
-			session.close();
-			sessionFactory.close();
 			
 			
 			/*try {

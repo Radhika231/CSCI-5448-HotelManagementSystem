@@ -20,6 +20,7 @@ public class UpdateInventoryView {
 		frame = new JFrame("Update Inventory");
 		frame.setBounds(100, 100, 450, 300);
 		frame.getContentPane().setLayout(null);
+
 		
 		JLabel lblEnterItemNo = new JLabel("Enter Item No.:");
 		lblEnterItemNo.setBounds(15, 59, 185, 26);

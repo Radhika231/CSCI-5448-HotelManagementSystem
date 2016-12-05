@@ -230,15 +230,15 @@ public class OrderFoodView {
 		lblMainCourse.setBounds(149, 7, 118, 15);
 		panelSides.add(lblMainCourse);
 		
-		chckbxDineIn = new JCheckBox("Dine In");
+		chckbxDineIn = new JCheckBox("In-Room");
 		chckbxDineIn.setBackground(new Color(255, 255, 255));
 		chckbxDineIn.setSelected(true);
-		chckbxDineIn.setBounds(430, 429, 86, 23);
+		chckbxDineIn.setBounds(525, 429, 129, 23);
 		frame.getContentPane().add(chckbxDineIn);
 		
-		chckbxTakeAway = new JCheckBox("Take Away");
+		chckbxTakeAway = new JCheckBox("Restaurant");
 		chckbxTakeAway.setBackground(new Color(255, 255, 255));
-		chckbxTakeAway.setBounds(520, 429, 129, 23);
+		chckbxTakeAway.setBounds(425, 429, 105, 23);
 		frame.getContentPane().add(chckbxTakeAway);
 		
 		panelReview = new JPanel();
