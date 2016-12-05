@@ -225,11 +225,13 @@ public class RoomBookingView {
 		panel_3.add(lblAdults);
 		
 		adults = new JSpinner();
+		adults.setModel(new SpinnerNumberModel(new Integer(1), new Integer(0), null, new Integer(1)));
 		adults.setBounds(199, 331, 28, 20);
 		panel_3.add(adults);
 		
 		childern = new JSpinner();
 		childern.setBounds(565, 331, 28, 20);
+		childern.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
 		panel_3.add(childern);
 		
 		JLabel lblNewLabel_2 = new JLabel("Childern");
