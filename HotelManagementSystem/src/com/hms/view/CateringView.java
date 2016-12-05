@@ -66,7 +66,7 @@ public class CateringView extends UserRole {
 		p.add(panel);
 		panel.setLayout(null);
 		
-		JButton btnLogout = new JButton("Logout");
+		btnLogout = new JButton("Logout");
 		btnLogout.setBounds(599, 16, 118, 24);
 		panel.add(btnLogout);
 		btnLogout.setBackground(new Color(255, 255, 255));

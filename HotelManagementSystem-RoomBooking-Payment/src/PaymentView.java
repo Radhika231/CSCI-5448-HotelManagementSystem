@@ -151,6 +151,7 @@ public class PaymentView {
 		cardNumberPane.setBounds(280, 56, 180, 21);
 		panel_1.add(cardNumberPane);
 		
+		
 		lblExpir = new JLabel("Expiry Date (MM)");
 		lblExpir.setBounds(131, 108, 133, 15);
 		panel_1.add(lblExpir);
