@@ -47,6 +47,7 @@ public class CateringController implements ActionListener{
 		 {
 			 case "Manage Food Inventory":
 				 ManageFoodInvController foodinv=new ManageFoodInvController();
+				 view1.setVisibilityFalse();
 				 foodinv.getUpdateButton().addActionListener(this);
 				 break;
 			 case "Logout":

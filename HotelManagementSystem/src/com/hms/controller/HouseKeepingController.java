@@ -43,6 +43,7 @@ public class HouseKeepingController implements ActionListener{
 		 {
 			 case "Manage Supply Inventory":
 				 ManageSupplyInvController supplyinv=new ManageSupplyInvController();
+				 view1.setVisibilityFalse();
 				 supplyinv.getUpdateButton().addActionListener(this);
 				 break;
 			 case "Logout":
