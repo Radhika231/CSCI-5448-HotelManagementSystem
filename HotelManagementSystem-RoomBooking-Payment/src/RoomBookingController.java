@@ -83,11 +83,12 @@ public class RoomBookingController implements ActionListener{
 		roomNumber = new ArrayList<Integer>();
 		roomPrice = new ArrayList<Double>();
 		int index=0;
+		noAvailPanel = roomBookingView.getNoAvailPanel();
 		
 				
 		if(actionCommand == "Show Availibility")
 		{
-
+			noAvailPanel.setVisible(false);
 			DateFormat df = new SimpleDateFormat("E, MMM dd yyyy");
 			totalPrice = 0.0;
 			showAvailpanel = roomBookingView.getPanel_4();
@@ -182,7 +183,7 @@ public class RoomBookingController implements ActionListener{
 				
 			else
 			{
-				noAvailPanel = roomBookingView.getNoAvailPanel();
+				
 				noAvailPanel.setVisible(true);
 				showAvailpanel.setVisible(false);
 			}									
