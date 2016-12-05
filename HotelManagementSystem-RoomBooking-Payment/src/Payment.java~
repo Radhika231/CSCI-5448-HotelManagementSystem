@@ -16,11 +16,11 @@ public class Payment {
 	}
 	
 	
-	public  List<CreditCardTable> getCardTable(Session session, String MycardNumber)
+	public  List<CreditCardTable> getCardTable(Session session, String cardNumber)
 	{		
 		String hibernateQuery = "FROM CreditCardTable AS E WHERE E.cardNumber =:cardnumber";
 		Query query 		  = session.createQuery(hibernateQuery);
-		query.setParameter("cardnumber",MycardNumber);
+		query.setParameter("cardnumber",cardNumber);
 			
 		List <CreditCardTable> creditCardList = ((org.hibernate.Query) query).list();
 		
