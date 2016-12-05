@@ -59,7 +59,7 @@ public class HouseKeepingController implements ActionListener{
 				 SupplyInventory supply=new SupplyInventory();
 				 supply.updateInventory(itemNum,numSupplies);
 				 JFrame frame = new JFrame("Entry Updated");
-				 JOptionPane.showMessageDialog(frame, "Entry Updated in Food Inventory");
+				 JOptionPane.showMessageDialog(frame, "Entry Updated in Supply Inventory");
 				 break;		
 			 case "HOME PAGE":
 				 Login.startSession("HouseKeeping");
