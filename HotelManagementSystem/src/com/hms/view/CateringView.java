@@ -16,6 +16,7 @@ public class CateringView extends UserRole {
 
 	JButton foodInv;
 	JButton btnLogout;
+	JFrame frame;
 	
 	//Home Screen View for Catering Staff using factory method
 	/**
@@ -24,11 +25,12 @@ public class CateringView extends UserRole {
 	public void userScreen()
 	{
 		ImageIcon iconX = new ImageIcon(getClass().getResource("/images/hotelimage1.jpg"));
-		JFrame frame=new JFrame("Catering Staff Home Screen");
+		frame=new JFrame("Catering Staff Home Screen");
+		frame.setBounds(600, 200, 450, 300);
 		Panel p=new Panel();
 		p.setBackground(new Color(240, 230, 140));
 		p.setLayout(null);
-		frame.setLocation(400, 50);
+		
 		
 		frame.getContentPane().add(p,BorderLayout.CENTER);
 		JLabel lblNewLabel = new JLabel(iconX);
@@ -77,6 +79,10 @@ public class CateringView extends UserRole {
 		frame.setVisible(true);
 		
 		
+	}
+	public void setVisibilityFalse()
+	{
+		frame.setVisible(false);
 	}
 	
     //Notify about button click updates to Observers

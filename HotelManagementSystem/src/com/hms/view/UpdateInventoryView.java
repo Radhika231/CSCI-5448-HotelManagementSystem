@@ -18,7 +18,7 @@ public class UpdateInventoryView {
 	public UpdateInventoryView() 
 	{
 		frame = new JFrame("Update Inventory");
-		frame.setBounds(100, 100, 450, 300);
+		frame.setBounds(600, 200, 450, 300);
 		frame.getContentPane().setLayout(null);
 
 		

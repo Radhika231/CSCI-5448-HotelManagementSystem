@@ -39,6 +39,7 @@ public class SignUpView extends LoginView
 				
 		 Display display = new Display();
 		 Shell shlSignUp = new Shell(SWT.CLOSE | SWT.BORDER );
+		 shlSignUp.setBounds(600, 200, 450, 300);
 		 shlSignUp.setSize(872, 484);
 		 shlSignUp.setText("Sign Up");
 		

@@ -4,6 +4,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 import org.eclipse.swt.widgets.Text;
 import org.hibernate.Query;
@@ -41,6 +43,7 @@ public class HouseKeepingController implements ActionListener{
 		 {
 			 case "Manage Supply Inventory":
 				 ManageSupplyInvController supplyinv=new ManageSupplyInvController();
+				 view1.setVisibilityFalse();
 				 supplyinv.getUpdateButton().addActionListener(this);
 				 break;
 			 case "Logout":
@@ -56,9 +59,12 @@ public class HouseKeepingController implements ActionListener{
 				 numSupplies=upd.getNumSupplies();
 				 SupplyInventory supply=new SupplyInventory();
 				 supply.updateInventory(itemNum,numSupplies);
+				 JFrame frame = new JFrame("Entry Updated");
+				 JOptionPane.showMessageDialog(frame, "Entry Updated in Supply Inventory");
 				 break;		
 			 case "HOME PAGE":
-				 Login.startSession("HouseKeeping");
+				 Login l=Login.getInstance();
+				 l.startSession("HouseKeeping");
 				 break;
 	         default:
 	        	 break;

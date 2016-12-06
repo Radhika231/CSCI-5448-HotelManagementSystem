@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 public class HouseKeepingView extends UserRole {
 	
 	JButton supplyInv,btnLogout;
-	
+	JFrame frame;
 	//display home screen for House Keeping Staff using Factory Method
 	/**
 	 * @wbp.parser.entryPoint
@@ -22,11 +22,12 @@ public class HouseKeepingView extends UserRole {
 	public void userScreen()
 	{
 		ImageIcon iconX = new ImageIcon(getClass().getResource("/images/hotelimage1.jpg"));
-		JFrame frame=new JFrame("HouseKeeping Staff Home Screen");
+		frame=new JFrame("HouseKeeping Staff Home Screen");
+		frame.setBounds(600, 200, 450, 300);
 		Panel p=new Panel();
 		p.setBackground(new Color(240, 230, 140));
 		p.setLayout(null);
-		frame.setLocation(400, 50);
+		
 		
 		frame.getContentPane().add(p,BorderLayout.CENTER);
 		JLabel lblNewLabel = new JLabel(iconX);
@@ -78,6 +79,10 @@ public class HouseKeepingView extends UserRole {
 		frame.setVisible(true);
 	}
 	
+	public void setVisibilityFalse()
+	{
+		frame.setVisible(false);
+	}
 	//Notify about button click updates to Observers
 	public JButton getManageSupplyInvBtn()
 	{

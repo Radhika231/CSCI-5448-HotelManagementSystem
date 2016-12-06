@@ -47,7 +47,7 @@ public class ManageSupplyInvController {
 					data[index][0]= inventory.getInventory_id();
 					data[index][1] = inventory.getItemName();
 					data[index][2] = inventory.getItemQuantity();
-					data[index][3] = inventory.getNeedsToBeOrdered();
+					data[index][3] = inventory.getNeedsToBeOrdered()?"yes":"no";
 					index++;
 				}
 	        	
@@ -65,6 +65,7 @@ public class ManageSupplyInvController {
 	{
 		// TODO Auto-generated method stub
 		 JFrame frame=new JFrame("Supply Inventory");
+		 frame.setBounds(600, 250, 450, 300);
 	     JPanel mainPanel = new JPanel();
 	     mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
 

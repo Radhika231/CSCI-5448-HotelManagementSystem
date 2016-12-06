@@ -29,8 +29,7 @@ public class Login extends LoginView
      }
      
      //Start session according to user role using factory method
-     //no point keeping this function static. defies the purpose actually
-     public static void startSession(String role)
+     public void startSession(String role)
      {
     	 LoginUserRoleFactory urole=new LoginUserRoleFactory(role);
     	
