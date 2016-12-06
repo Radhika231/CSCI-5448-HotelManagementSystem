@@ -5,11 +5,17 @@ import com.hms.model.*;
 
 //Concrete Class for factory design pattern to instantiate UserRole screen according to user role
 //Object instantiation is deferred to sub classes
-public class LoginUserRoleFactory {
+public class LoginUserRoleFactory extends LoginUserRoleFactoryBase{
 
+	String role;
 	public LoginUserRoleFactory(String role)
 	{
-	     //Factory Design Pattern
+	     this.role = role;
+	}
+
+	@Override
+	void createUser() {
+		//Factory Design Pattern
 		 if(role.equals("Customer"))
 		 {
 			UserRole screen= new CustomerView();
@@ -46,5 +52,6 @@ public class LoginUserRoleFactory {
 			 HouseKeepingController hk =new HouseKeepingController((HouseKeepingView)screen);
 			 hk.control();
 		 }
+		
 	}
 }

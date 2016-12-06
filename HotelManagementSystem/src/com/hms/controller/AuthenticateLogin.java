@@ -85,6 +85,7 @@ public class AuthenticateLogin extends UserLogInSignUpController
 		 session.close();
 		 sessionFactory.close();
 		 */
+		System.out.println("Here 0");
 		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
 		Session session = sessionFactory.openSession();
 		session.beginTransaction();
@@ -98,6 +99,7 @@ public class AuthenticateLogin extends UserLogInSignUpController
 		}
 		session.close();
 		sessionFactory.close();
+		System.out.println("Here 1");
 		return result;
 	}
 	

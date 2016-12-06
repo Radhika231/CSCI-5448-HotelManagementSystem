@@ -8,6 +8,7 @@ import com.hms.view.LoginView;
 //Singleton Design Pattern
 public class Login extends LoginView 
 {  
+	 private LoginUserRoleFactory urole;
      private static Login uniqueInstance=null;
      private Login()
      {
@@ -31,7 +32,8 @@ public class Login extends LoginView
      //Start session according to user role using factory method
      public void startSession(String role)
      {
-    	 LoginUserRoleFactory urole=new LoginUserRoleFactory(role);
+    	 urole=new LoginUserRoleFactory(role);
+    	 urole.createUser();
     	
      }
 }
