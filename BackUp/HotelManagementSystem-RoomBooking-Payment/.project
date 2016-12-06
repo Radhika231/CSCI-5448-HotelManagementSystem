@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>HotelManagementSystem-RoomBooking-Payment</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<variableList>
+		<variable>
+			<name>MyImage</name>
+			<value>file:/media/meher/New%20Volume/Fall2016/OOAD/Project/38849817-H1-Exterior_1-16x7.jpg</value>
+		</variable>
+	</variableList>
+</projectDescription>
